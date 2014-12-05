@@ -13,6 +13,10 @@
 		0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */; };
 		0C30560C1A31F3F600F4D4B2 /* DelimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */; };
 		0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */; };
+		0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E51A320ED100DE3B5B /* Main.storyboard */; };
+		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
+		0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F61A32217100DE3B5B /* BarHelper.m */; };
+		0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F91A32218200DE3B5B /* ColorHelper.m */; };
 		23F0F348DE0464F21073F790 /* libPods-Delima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,13 @@
 		0C30560A1A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelimaTests.m; sourceTree = "<group>"; };
 		0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0CAAD2E51A320ED100DE3B5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0CAAD2E81A32120300DE3B5B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		0CAAD2E91A32120300DE3B5B /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		0CAAD2F51A32217100DE3B5B /* BarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarHelper.h; sourceTree = "<group>"; };
+		0CAAD2F61A32217100DE3B5B /* BarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarHelper.m; sourceTree = "<group>"; };
+		0CAAD2F81A32218200DE3B5B /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
+		0CAAD2F91A32218200DE3B5B /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
 		9301EBAF5A5D5CB69BB60A59 /* Pods-Delima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.release.xcconfig"; sourceTree = "<group>"; };
 		C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delima.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +170,7 @@
 		0CAAD2DA1A32086500DE3B5B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD2E51A320ED100DE3B5B /* Main.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD2E71A3211EA00DE3B5B /* Left Menu */,
 				0CAAD2E01A320B3000DE3B5B /* Home */,
 			);
 			name = "View Controller";
@@ -183,8 +196,21 @@
 		0CAAD2E11A320B3A00DE3B5B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD2F51A32217100DE3B5B /* BarHelper.h */,
+				0CAAD2F61A32217100DE3B5B /* BarHelper.m */,
+				0CAAD2F81A32218200DE3B5B /* ColorHelper.h */,
+				0CAAD2F91A32218200DE3B5B /* ColorHelper.m */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		0CAAD2E71A3211EA00DE3B5B /* Left Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD2E81A32120300DE3B5B /* LeftViewController.h */,
+				0CAAD2E91A32120300DE3B5B /* LeftViewController.m */,
+			);
+			name = "Left Menu";
 			sourceTree = "<group>";
 		};
 		12DC53652AC0E4C707F27A48 /* Frameworks */ = {
@@ -286,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */,
 				0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */,
 				0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */,
 			);
@@ -339,7 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
+				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
+				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
+				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Delima/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -460,7 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Delima/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -2,8 +2,7 @@
 # platform :ios, '6.0'
 
 target 'Delima' do
-	pod 'MMDrawerController'
-	pod 'MMDrawerController+Storyboard'
+	pod 'SWRevealViewController', '~> 2.3'
 	pod 'AFNetworking'
 	pod 'Realm'
 	pod 'JVFloatLabeledTextField'
