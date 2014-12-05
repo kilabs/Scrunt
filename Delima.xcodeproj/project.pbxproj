@@ -17,6 +17,8 @@
 		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
 		0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F61A32217100DE3B5B /* BarHelper.m */; };
 		0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F91A32218200DE3B5B /* ColorHelper.m */; };
+		0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2FF1A32230300DE3B5B /* globalVariable.m */; };
+		0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */; };
 		23F0F348DE0464F21073F790 /* libPods-Delima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,11 @@
 		0CAAD2F61A32217100DE3B5B /* BarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarHelper.m; sourceTree = "<group>"; };
 		0CAAD2F81A32218200DE3B5B /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
 		0CAAD2F91A32218200DE3B5B /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
+		0CAAD2FE1A32230300DE3B5B /* globalVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalVariable.h; sourceTree = "<group>"; };
+		0CAAD2FF1A32230300DE3B5B /* globalVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = globalVariable.m; sourceTree = "<group>"; };
+		0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimaAPIManager.h; sourceTree = "<group>"; };
+		0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = delimaAPIManager.m; sourceTree = "<group>"; };
+		0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9301EBAF5A5D5CB69BB60A59 /* Pods-Delima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.release.xcconfig"; sourceTree = "<group>"; };
 		C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delima.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,11 +105,12 @@
 		0C3055EE1A31F3F600F4D4B2 /* Delima */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD3061A32287600DE3B5B /* Model */,
+				0CAAD2FB1A3221B700DE3B5B /* Manager */,
 				0CAAD2E11A320B3A00DE3B5B /* Helper */,
 				0CAAD2DF1A320B2600DE3B5B /* View Controller */,
 				0CAAD2DA1A32086500DE3B5B /* Storyboard */,
 				0CAAD2D91A31FC1A00DE3B5B /* Model */,
-				0CAAD2D81A31FC1500DE3B5B /* Helper */,
 				0CAAD2D71A31FC0B00DE3B5B /* Navigation Controller */,
 				0CAAD2D61A31FC0400DE3B5B /* Controller */,
 				0C3055F31A31F3F600F4D4B2 /* AppDelegate.h */,
@@ -118,6 +126,7 @@
 			children = (
 				0C3055F01A31F3F600F4D4B2 /* Info.plist */,
 				0C3055F11A31F3F600F4D4B2 /* main.m */,
+				0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,13 +160,6 @@
 			children = (
 			);
 			name = "Navigation Controller";
-			sourceTree = "<group>";
-		};
-		0CAAD2D81A31FC1500DE3B5B /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helper;
 			sourceTree = "<group>";
 		};
 		0CAAD2D91A31FC1A00DE3B5B /* Model */ = {
@@ -196,6 +198,7 @@
 		0CAAD2E11A320B3A00DE3B5B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD2FD1A3222BB00DE3B5B /* Static */,
 				0CAAD2F51A32217100DE3B5B /* BarHelper.h */,
 				0CAAD2F61A32217100DE3B5B /* BarHelper.m */,
 				0CAAD2F81A32218200DE3B5B /* ColorHelper.h */,
@@ -211,6 +214,47 @@
 				0CAAD2E91A32120300DE3B5B /* LeftViewController.m */,
 			);
 			name = "Left Menu";
+			sourceTree = "<group>";
+		};
+		0CAAD2FB1A3221B700DE3B5B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD3071A32288700DE3B5B /* Realm Manager */,
+				0CAAD2FC1A32227200DE3B5B /* API Manager */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		0CAAD2FC1A32227200DE3B5B /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */,
+				0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */,
+			);
+			name = "API Manager";
+			sourceTree = "<group>";
+		};
+		0CAAD2FD1A3222BB00DE3B5B /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD2FE1A32230300DE3B5B /* globalVariable.h */,
+				0CAAD2FF1A32230300DE3B5B /* globalVariable.m */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
+		0CAAD3061A32287600DE3B5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0CAAD3071A32288700DE3B5B /* Realm Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Realm Manager";
 			sourceTree = "<group>";
 		};
 		12DC53652AC0E4C707F27A48 /* Frameworks */ = {
@@ -369,7 +413,9 @@
 				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
+				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
+				0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +521,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = Delima/PrefixHeader.pch;
 				INFOPLIST_FILE = Delima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -489,6 +538,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = Delima/PrefixHeader.pch;
 				INFOPLIST_FILE = Delima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
