@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2905001A332BE200227B1E /* RealmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2904FF1A332BE200227B1E /* RealmManager.m */; };
+		0C2905041A333EB200227B1E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2905031A333EB200227B1E /* User.m */; };
+		0C2905081A333F7400227B1E /* Favorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2905071A333F7400227B1E /* Favorite.m */; };
+		0C29051C1A3345E400227B1E /* status.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C29051B1A3345E400227B1E /* status.plist */; };
 		0C3055F21A31F3F600F4D4B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F11A31F3F600F4D4B2 /* main.m */; };
 		0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F41A31F3F600F4D4B2 /* AppDelegate.m */; };
 		0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F71A31F3F600F4D4B2 /* ViewController.m */; };
 		0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */; };
 		0C30560C1A31F3F600F4D4B2 /* DelimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */; };
+		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
 		0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */; };
 		0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E51A320ED100DE3B5B /* Main.storyboard */; };
 		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
@@ -19,6 +24,9 @@
 		0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F91A32218200DE3B5B /* ColorHelper.m */; };
 		0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2FF1A32230300DE3B5B /* globalVariable.m */; };
 		0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */; };
+		0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3161A32856A00DE3B5B /* MenuCell.m */; };
+		0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13BE1A3430380074B6CF /* LoginViewController.m */; };
+		0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */; };
 		23F0F348DE0464F21073F790 /* libPods-Delima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +42,13 @@
 
 /* Begin PBXFileReference section */
 		082D33E1F53ABADDD871A6AF /* Pods-Delima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.debug.xcconfig"; sourceTree = "<group>"; };
+		0C2904FE1A332BE200227B1E /* RealmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmManager.h; sourceTree = "<group>"; };
+		0C2904FF1A332BE200227B1E /* RealmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmManager.m; sourceTree = "<group>"; };
+		0C2905021A333EB200227B1E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0C2905031A333EB200227B1E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0C2905061A333F7400227B1E /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
+		0C2905071A333F7400227B1E /* Favorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorite.m; sourceTree = "<group>"; };
+		0C29051B1A3345E400227B1E /* status.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = status.plist; sourceTree = "<group>"; };
 		0C3055EC1A31F3F600F4D4B2 /* Delima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3055F01A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C3055F11A31F3F600F4D4B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +60,8 @@
 		0C3056051A31F3F600F4D4B2 /* DelimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C30560A1A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelimaTests.m; sourceTree = "<group>"; };
+		0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimaCommonFunction.h; sourceTree = "<group>"; };
+		0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimaCommonFunction.m; sourceTree = "<group>"; };
 		0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0CAAD2E51A320ED100DE3B5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0CAAD2E81A32120300DE3B5B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -58,6 +75,12 @@
 		0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimaAPIManager.h; sourceTree = "<group>"; };
 		0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = delimaAPIManager.m; sourceTree = "<group>"; };
 		0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0CAAD3151A32856A00DE3B5B /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
+		0CAAD3161A32856A00DE3B5B /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		0CDC13BD1A3430380074B6CF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0CDC13BE1A3430380074B6CF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
+		0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		9301EBAF5A5D5CB69BB60A59 /* Pods-Delima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.release.xcconfig"; sourceTree = "<group>"; };
 		C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delima.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +104,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2905011A333E9700227B1E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0C2905021A333EB200227B1E /* User.h */,
+				0C2905031A333EB200227B1E /* User.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		0C2905051A333F6400227B1E /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0C2905061A333F7400227B1E /* Favorite.h */,
+				0C2905071A333F7400227B1E /* Favorite.m */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		0C29051A1A33452E00227B1E /* Static Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C29051B1A3345E400227B1E /* status.plist */,
+			);
+			name = "Static Data";
+			sourceTree = "<group>";
+		};
 		0C3055E31A31F3F600F4D4B2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +154,13 @@
 		0C3055EE1A31F3F600F4D4B2 /* Delima */ = {
 			isa = PBXGroup;
 			children = (
+				0CFE87421A337DA400C6D1CB /* View */,
+				0CAAD3091A3231DF00DE3B5B /* Resource */,
 				0CAAD3061A32287600DE3B5B /* Model */,
 				0CAAD2FB1A3221B700DE3B5B /* Manager */,
 				0CAAD2E11A320B3A00DE3B5B /* Helper */,
 				0CAAD2DF1A320B2600DE3B5B /* View Controller */,
 				0CAAD2DA1A32086500DE3B5B /* Storyboard */,
-				0CAAD2D91A31FC1A00DE3B5B /* Model */,
 				0CAAD2D71A31FC0B00DE3B5B /* Navigation Controller */,
 				0CAAD2D61A31FC0400DE3B5B /* Controller */,
 				0C3055F31A31F3F600F4D4B2 /* AppDelegate.h */,
@@ -162,13 +212,6 @@
 			name = "Navigation Controller";
 			sourceTree = "<group>";
 		};
-		0CAAD2D91A31FC1A00DE3B5B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		0CAAD2DA1A32086500DE3B5B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +223,7 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0CDC13BC1A3430210074B6CF /* Login */,
 				0CAAD2E71A3211EA00DE3B5B /* Left Menu */,
 				0CAAD2E01A320B3000DE3B5B /* Home */,
 			);
@@ -203,6 +247,8 @@
 				0CAAD2F61A32217100DE3B5B /* BarHelper.m */,
 				0CAAD2F81A32218200DE3B5B /* ColorHelper.h */,
 				0CAAD2F91A32218200DE3B5B /* ColorHelper.m */,
+				0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */,
+				0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -210,6 +256,7 @@
 		0CAAD2E71A3211EA00DE3B5B /* Left Menu */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD3081A322F4700DE3B5B /* Cell Subclass */,
 				0CAAD2E81A32120300DE3B5B /* LeftViewController.h */,
 				0CAAD2E91A32120300DE3B5B /* LeftViewController.m */,
 			);
@@ -246,6 +293,8 @@
 		0CAAD3061A32287600DE3B5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C2905051A333F6400227B1E /* Favorite */,
+				0C2905011A333E9700227B1E /* User */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,8 +302,61 @@
 		0CAAD3071A32288700DE3B5B /* Realm Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0C2904FE1A332BE200227B1E /* RealmManager.h */,
+				0C2904FF1A332BE200227B1E /* RealmManager.m */,
 			);
 			name = "Realm Manager";
+			sourceTree = "<group>";
+		};
+		0CAAD3081A322F4700DE3B5B /* Cell Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD3151A32856A00DE3B5B /* MenuCell.h */,
+				0CAAD3161A32856A00DE3B5B /* MenuCell.m */,
+			);
+			name = "Cell Subclass";
+			sourceTree = "<group>";
+		};
+		0CAAD3091A3231DF00DE3B5B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0C29051A1A33452E00227B1E /* Static Data */,
+				0CAAD30A1A3231E700DE3B5B /* Font */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		0CAAD30A1A3231E700DE3B5B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		0CDC13BC1A3430210074B6CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0CDC13BD1A3430380074B6CF /* LoginViewController.h */,
+				0CDC13BE1A3430380074B6CF /* LoginViewController.m */,
+				0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */,
+				0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0CFE87421A337DA400C6D1CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CFE87431A337DAC00C6D1CB /* Top View */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0CFE87431A337DAC00C6D1CB /* Top View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Top View";
 			sourceTree = "<group>";
 		};
 		12DC53652AC0E4C707F27A48 /* Frameworks */ = {
@@ -358,6 +460,7 @@
 			files = (
 				0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */,
 				0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */,
+				0C29051C1A3345E400227B1E /* status.plist in Resources */,
 				0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,10 +514,17 @@
 			files = (
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
 				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
+				0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */,
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
+				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,
+				0C2905001A332BE200227B1E /* RealmManager.m in Sources */,
+				0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
+				0C2905041A333EB200227B1E /* User.m in Sources */,
 				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
+				0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
+				0C2905081A333F7400227B1E /* Favorite.m in Sources */,
 				0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
 			);

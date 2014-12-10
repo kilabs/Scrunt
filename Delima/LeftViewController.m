@@ -7,7 +7,7 @@
 //
 
 #import "LeftViewController.h"
-
+#import "MenuCell.h"
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableVIew;
 @property (strong,nonatomic) NSArray *menu;
@@ -17,8 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor =[UIColor redColor];
-    
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
     _tableVIew.delegate = self;
     _tableVIew.dataSource  =self;
     _tableVIew.tableFooterView = [[UIView alloc]init];
@@ -37,8 +44,8 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [_tableVIew dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.textLabel.text = [_menu objectAtIndex:indexPath.row];
+    MenuCell *cell = [_tableVIew dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.menuName.text = [_menu objectAtIndex:indexPath.row];
     return cell;
 }
 /*
