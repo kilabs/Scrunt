@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DelimaCommonFunction : NSObject
+
++ (NSString *)osVersionBuild;
 + (DelimaCommonFunction *)sharedCommonFunction;
 - (NSString *) md5:(NSString *) input;
 @end

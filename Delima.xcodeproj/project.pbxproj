@@ -17,6 +17,8 @@
 		0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */; };
 		0C30560C1A31F3F600F4D4B2 /* DelimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */; };
 		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
+		0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */; };
+		0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */; };
 		0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */; };
 		0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E51A320ED100DE3B5B /* Main.storyboard */; };
 		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
@@ -62,6 +64,9 @@
 		0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelimaTests.m; sourceTree = "<group>"; };
 		0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimaCommonFunction.h; sourceTree = "<group>"; };
 		0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimaCommonFunction.m; sourceTree = "<group>"; };
+		0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+LoginManager.h"; sourceTree = "<group>"; };
+		0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+LoginManager.m"; sourceTree = "<group>"; };
 		0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0CAAD2E51A320ED100DE3B5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0CAAD2E81A32120300DE3B5B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0CAAD2E51A320ED100DE3B5B /* Main.storyboard */,
+				0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			children = (
 				0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */,
 				0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */,
+				0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */,
+				0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */,
 			);
 			name = "API Manager";
 			sourceTree = "<group>";
@@ -461,6 +469,7 @@
 				0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */,
 				0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */,
 				0C29051C1A3345E400227B1E /* status.plist in Resources */,
+				0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */,
 				0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +527,7 @@
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
 				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,
 				0C2905001A332BE200227B1E /* RealmManager.m in Sources */,
+				0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */,
 				0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
 				0C2905041A333EB200227B1E /* User.m in Sources */,

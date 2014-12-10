@@ -10,7 +10,6 @@
 #import "globalVariable.h"
 @implementation delimaAPIManager
 + (instancetype)sharedClient {
-    NSLog(@"123");
     static delimaAPIManager *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -20,6 +19,7 @@
         _sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
         [_sharedClient.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [_sharedClient.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        
     });
     
     return _sharedClient;

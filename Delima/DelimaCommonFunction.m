@@ -7,8 +7,10 @@
 //
 
 #import "DelimaCommonFunction.h"
+#import <sys/sysctl.h>
 #import <CommonCrypto/CommonDigest.h>
 @implementation DelimaCommonFunction
+
 + (DelimaCommonFunction *)sharedCommonFunction{
     static dispatch_once_t pred;
     static DelimaCommonFunction *shared = nil;

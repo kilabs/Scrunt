@@ -7,8 +7,12 @@
 //
 
 #import "MainLoginViewController.h"
-
+#import "User.h"
+#import "DelimaCommonFunction.h"
+#import "API+LoginManager.h"
 @interface MainLoginViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *userName;
+@property (strong, nonatomic) IBOutlet UITextField *password;
 
 @end
 
@@ -28,7 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginPressed:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    NSDictionary *params = @{@"uname":_userName.text,
+                             @"passwd":[[DelimaCommonFunction sharedCommonFunction]md5:_password.text],
+                             @"terminal":[[NSUUID UUID] UUIDString],
+                             @"os":@"IOS",
+                             @"version":[[UIDevice currentDevice] systemVersion],
+                             @"ref":@"DelimaMobile"
+                             };
+    [API_LoginManager login:params];
 }
 
 /*

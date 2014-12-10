@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "User.h"
+#import "LoginViewController.h"
 #import <SWRevealViewController.h>
 @interface ViewController ()
 
@@ -22,6 +24,19 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     self.revealViewController.panGestureRecognizer.enabled=YES;
+    _userActive = [User getUserProfile];
+    if (![_userActive.sessionid isEqualToString:@""]) {
+        NSLog(@"User Login in");
+    }
+    else{
+        UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        UINavigationController *nav = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+        LoginViewController *login = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        login = nav.viewControllers[0];
+        [self.navigationController presentViewController:nav animated:YES completion:nil];
+    }
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

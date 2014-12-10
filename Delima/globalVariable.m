@@ -9,7 +9,7 @@
 #import "globalVariable.h"
 
 @implementation globalVariable
-NSString *delimaAPIUrl = @"";
+NSString *delimaAPIUrl = @"https://www.mcmobilecash.com/mcjqmjson/";
 
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 netra. All rights reserved.
 //
 
-#import "AFHTTPSessionManager.h"
+#import "AFHTTPRequestOperationManager.h"
 
-@interface delimaAPIManager : AFHTTPSessionManager
+@interface delimaAPIManager : AFHTTPRequestOperationManager
 + (instancetype)sharedClient;
 @end

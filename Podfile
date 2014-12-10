@@ -8,5 +8,6 @@ target 'Delima' do
 	pod 'JVFloatLabeledTextField'
 	pod 'CRToast'
 	pod 'DZNSegmentedControl'
+    pod 'NSJSONSerialization-NSNullRemoval'
 end
 
