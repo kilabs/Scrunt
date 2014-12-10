@@ -15,8 +15,8 @@
     dispatch_once(&onceToken, ^{
         _sharedClient = [[delimaAPIManager alloc] initWithBaseURL:[NSURL URLWithString:delimaAPIUrl]];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        _sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
-        _sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
+        _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
         [_sharedClient.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [_sharedClient.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         

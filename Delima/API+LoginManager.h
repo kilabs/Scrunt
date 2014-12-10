@@ -21,5 +21,5 @@
 @property (nonatomic, strong) NSString *name;
 
 - (instancetype)initWithUserBasicAttribute:(NSDictionary *)attributes;
-+ (void)login:(NSDictionary *)params;
++ (NSURLSessionDataTask *)login:(NSDictionary *)params login:(void (^)(NSArray *posts, NSError *error))block;
 @end

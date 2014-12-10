@@ -39,7 +39,9 @@
                              @"version":[[UIDevice currentDevice] systemVersion],
                              @"ref":@"DelimaMobile"
                              };
-    [API_LoginManager login:params];
+    [API_LoginManager login:params login:^(NSArray *posts, NSError *error) {
+
+    }];
 }
 
 /*

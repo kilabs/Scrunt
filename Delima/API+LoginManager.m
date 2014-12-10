@@ -10,6 +10,7 @@
 #import "DelimaCommonFunction.h"
 #import "globalVariable.h"
 #import "delimaAPIManager.h"
+
 #import <NSJSONSerialization+RemovingNulls.h>
 @implementation API_LoginManager
 /*
@@ -43,44 +44,40 @@
     
     return self;
 }
-//+ (NSURLSessionDataTask *)login:(NSDictionary *)params login:(void (^)(NSArray *posts, NSError *error))block{
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
-//                                                       options:NSJSONReadingMutableContainers
-//                                                         error:nil];
-//    NSString* jsonString =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    NSLog(@"json String-->%@")
-//    return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:aStr success:^(NSURLSessionDataTask *task, id responseObject) {
-//        NSLog(@"data-->%@",aStr);
-//        NSDictionary *postsFromResponse = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
++ (NSURLSessionDataTask *)login:(NSDictionary *)params login:(void (^)(NSArray *posts, NSError *error))block{
+
+    return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(<#NSString *format, ...#>)
 //
 //        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
-//
-//        NSLog(@"-------->%@",[postsFromResponse objectForKey:@"rc"]);
+        NSLog(@"-------->%@",responseObject);
 //        if (postsFromResponse) {
 //            API_LoginManager *post = [[API_LoginManager alloc]initWithUserBasicAttribute:postsFromResponse];
 //            [mutablePosts addObject:post];
 //        }
-//        if (block) {
-//            block([NSArray arrayWithArray:mutablePosts], nil);
-//        }
-//    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
-//        if (block) {
-//            NSLog(@"error--->%@",error);
-//            block([NSArray array], error);
-//        }
-//    }];
-//}
-+(void)login:(NSDictionary *)params{
-    NSLog(@"params-->%@",params);
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
-                                                       options:NSJSONReadingMutableContainers
-                                                         error:nil];
-    NSString* stripped = [NSString stringWithFormat:@"{%@}",[NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil removingNulls:YES ignoreArrays:NO]];
-    NSLog(@"Stripped-->%@",stripped);
-    [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:stripped success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response object--->%@",[NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil]);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        if (block) {
+            block([NSArray arrayWithArray:nil], nil);
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            NSLog(@"error--->%@",error);
+            block([NSArray array], error);
+        }
     }];
-};
+}
+//+(void)login:(NSDictionary *)params{
+//    NSLog(@"params-->%@",params);
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
+//                                                       options:NSJSONReadingMutableContainers
+//                                                         error:nil];
+//    NSString* stripped = [NSString stringWithFormat:@"{%@}",[NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil removingNulls:YES ignoreArrays:NO]];
+//    NSLog(@"Stripped-->%@",stripped);
+//    [stripped stringByReplacingOccurrencesOfString:@";" withString:@"\","];
+//    NSLog(@"stripped->%@")
+////    [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:stripped success:^(AFHTTPRequestOperation *operation, id responseObject) {
+////        NSLog(@"response object--->%@",[NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil]);
+////    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+////        
+////    }];
+//};
 @end
