@@ -8,6 +8,7 @@
 
 #import "LeftViewController.h"
 #import "MenuCell.h"
+#import "ColorHelper.h"
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableVIew;
 @property (strong,nonatomic) NSArray *menu;
@@ -17,19 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
+
     _tableVIew.delegate = self;
     _tableVIew.dataSource  =self;
     _tableVIew.tableFooterView = [[UIView alloc]init];
-    
+    _tableVIew.backgroundColor = [UIColor delimaDarkGrayColor];
+    _tableVIew.backgroundView.backgroundColor = [UIColor delimaDarkGrayColor];
     _menu = [NSArray arrayWithObjects:@"Home",@"Isi Saldo",@"Transfer",@"Beli",@"Bayar",@"History Online",@"Profil & Pengaturan",@"Logout", nil];
     // Do any additional setup after loading the view.
 }

@@ -203,6 +203,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C9FCA8B1A3B43B700BED34F /* Cash In */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Cash In";
+			sourceTree = "<group>";
+		};
+		0C9FCA8C1A3B44CB00BED34F /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Transfer;
+			sourceTree = "<group>";
+		};
+		0C9FCA8D1A3B44D700BED34F /* Beli */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Beli;
+			sourceTree = "<group>";
+		};
+		0C9FCA8E1A3B44DF00BED34F /* Bayar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Bayar;
+			sourceTree = "<group>";
+		};
+		0C9FCA8F1A3B44E300BED34F /* History Online */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "History Online";
+			sourceTree = "<group>";
+		};
+		0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Profile dan Pengaturan";
+			sourceTree = "<group>";
+		};
 		0CAAD2D61A31FC0400DE3B5B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +271,12 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */,
+				0C9FCA8F1A3B44E300BED34F /* History Online */,
+				0C9FCA8E1A3B44DF00BED34F /* Bayar */,
+				0C9FCA8D1A3B44D700BED34F /* Beli */,
+				0C9FCA8C1A3B44CB00BED34F /* Transfer */,
+				0C9FCA8B1A3B43B700BED34F /* Cash In */,
 				0CDC13BC1A3430210074B6CF /* Login */,
 				0CAAD2E71A3211EA00DE3B5B /* Left Menu */,
 				0CAAD2E01A320B3000DE3B5B /* Home */,

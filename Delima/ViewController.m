@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "User.h"
+#import "BarHelper.h"
 #import "LoginViewController.h"
 #import <SWRevealViewController.h>
 @interface ViewController ()
@@ -19,14 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    [self setDefaultDelimaNavigationBar];
     self.revealViewController.panGestureRecognizer.enabled=YES;
     _userActive = [User getUserProfile];
     if (![_userActive.sessionid isEqualToString:@""]) {
-        NSLog(@"User Login in");
     }
     else{
         UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
