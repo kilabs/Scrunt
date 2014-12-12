@@ -46,7 +46,11 @@
              @"typeeva":@"",
              @"idcode":@"",
              @"merchantCode":@"",
+             @"terminal":@"",
+             @"passwd":@"",
              @"name":@"",
+             @"uname":@"",
+             @"ref":@""
              };
 }
 

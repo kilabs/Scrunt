@@ -14,6 +14,7 @@
 @property NSDate *createdAt;
 @property NSDate *updatedAt;
 @property NSString *uname;
+@property NSString *terminal;
 @property NSString *passwd;
 @property NSString *os;
 @property NSString *version;

@@ -40,7 +40,11 @@
                              @"ref":@"DelimaMobile"
                              };
     [API_LoginManager login:params login:^(NSArray *posts, NSError *error) {
-
+        if(!error){
+           [self.navigationController dismissViewControllerAnimated:YES completion:^{
+               NSLog(@"dismiss");
+           }];
+        }
     }];
 }
 
