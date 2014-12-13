@@ -7,7 +7,7 @@
 //
 
 #import "CashInViewController.h"
-
+#import "BarHelper.h"
 @interface CashInViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setDefaultDelimaNavigationBar];
     // Do any additional setup after loading the view.
 }
 
