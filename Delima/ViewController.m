@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "User.h"
 #import "BarHelper.h"
+#import "TransferTableViewController.h"
 #import "LoginViewController.h"
 #import <SWRevealViewController.h>
 @interface ViewController ()

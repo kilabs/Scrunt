@@ -19,6 +19,20 @@
 		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
 		0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */; };
 		0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */; };
+		0C9FCA931A3B496000BED34F /* Cashin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA921A3B496000BED34F /* Cashin.storyboard */; };
+		0C9FCA951A3B496F00BED34F /* Beli.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA941A3B496F00BED34F /* Beli.storyboard */; };
+		0C9FCA971A3B497A00BED34F /* Bayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA961A3B497A00BED34F /* Bayar.storyboard */; };
+		0C9FCA9A1A3BFA2F00BED34F /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */; };
+		0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */; };
+		0C9FCAA01A3BFE2800BED34F /* TransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */; };
+		0C9FCAA31A3BFE4E00BED34F /* TransferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */; };
+		0C9FCAA51A3BFF5C00BED34F /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA41A3BFF5C00BED34F /* History.storyboard */; };
+		0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */; };
+		0C9FCAAA1A3C011200BED34F /* BayarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */; };
+		0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */; };
+		0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */; };
+		0C9FCAB31A3C049E00BED34F /* SharedBeliViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */; };
+		0C9FCAB61A3C08C100BED34F /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */; };
 		0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */; };
 		0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E51A320ED100DE3B5B /* Main.storyboard */; };
 		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
@@ -67,6 +81,28 @@
 		0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+LoginManager.h"; sourceTree = "<group>"; };
 		0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+LoginManager.m"; sourceTree = "<group>"; };
+		0C9FCA921A3B496000BED34F /* Cashin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cashin.storyboard; sourceTree = "<group>"; };
+		0C9FCA941A3B496F00BED34F /* Beli.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Beli.storyboard; sourceTree = "<group>"; };
+		0C9FCA961A3B497A00BED34F /* Bayar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bayar.storyboard; sourceTree = "<group>"; };
+		0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
+		0C9FCA9B1A3BFCD800BED34F /* CashInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashInViewController.h; sourceTree = "<group>"; };
+		0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashInViewController.m; sourceTree = "<group>"; };
+		0C9FCA9E1A3BFE2800BED34F /* TransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferViewController.h; sourceTree = "<group>"; };
+		0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferViewController.m; sourceTree = "<group>"; };
+		0C9FCAA11A3BFE4E00BED34F /* TransferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAA41A3BFF5C00BED34F /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
+		0C9FCAA81A3C011200BED34F /* BayarListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BayarListTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayarListTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAAB1A3C013600BED34F /* SharedBayarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedBayarDetailViewController.h; sourceTree = "<group>"; };
+		0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedBayarDetailViewController.m; sourceTree = "<group>"; };
+		0C9FCAAE1A3C046500BED34F /* BeliListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeliListTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeliListTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAB11A3C049E00BED34F /* SharedBeliViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedBeliViewController.h; sourceTree = "<group>"; };
+		0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedBeliViewController.m; sourceTree = "<group>"; };
+		0C9FCAB41A3C08C100BED34F /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0CAAD2E51A320ED100DE3B5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0CAAD2E81A32120300DE3B5B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -206,6 +242,8 @@
 		0C9FCA8B1A3B43B700BED34F /* Cash In */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCA9B1A3BFCD800BED34F /* CashInViewController.h */,
+				0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */,
 			);
 			name = "Cash In";
 			sourceTree = "<group>";
@@ -213,6 +251,10 @@
 		0C9FCA8C1A3B44CB00BED34F /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCA9E1A3BFE2800BED34F /* TransferViewController.h */,
+				0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */,
+				0C9FCAA11A3BFE4E00BED34F /* TransferTableViewController.h */,
+				0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */,
 			);
 			name = Transfer;
 			sourceTree = "<group>";
@@ -220,6 +262,10 @@
 		0C9FCA8D1A3B44D700BED34F /* Beli */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCAAE1A3C046500BED34F /* BeliListTableViewController.h */,
+				0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */,
+				0C9FCAB11A3C049E00BED34F /* SharedBeliViewController.h */,
+				0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */,
 			);
 			name = Beli;
 			sourceTree = "<group>";
@@ -227,6 +273,10 @@
 		0C9FCA8E1A3B44DF00BED34F /* Bayar */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCAA81A3C011200BED34F /* BayarListTableViewController.h */,
+				0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */,
+				0C9FCAAB1A3C013600BED34F /* SharedBayarDetailViewController.h */,
+				0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */,
 			);
 			name = Bayar;
 			sourceTree = "<group>";
@@ -234,6 +284,8 @@
 		0C9FCA8F1A3B44E300BED34F /* History Online */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FCAB41A3C08C100BED34F /* HistoryTableViewController.h */,
+				0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */,
 			);
 			name = "History Online";
 			sourceTree = "<group>";
@@ -264,6 +316,12 @@
 			children = (
 				0CAAD2E51A320ED100DE3B5B /* Main.storyboard */,
 				0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */,
+				0C9FCA921A3B496000BED34F /* Cashin.storyboard */,
+				0C9FCA941A3B496F00BED34F /* Beli.storyboard */,
+				0C9FCA961A3B497A00BED34F /* Bayar.storyboard */,
+				0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */,
+				0C9FCAA41A3BFF5C00BED34F /* History.storyboard */,
+				0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -514,10 +572,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9FCA931A3B496000BED34F /* Cashin.storyboard in Resources */,
 				0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */,
+				0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */,
+				0C9FCA951A3B496F00BED34F /* Beli.storyboard in Resources */,
+				0C9FCAA51A3BFF5C00BED34F /* History.storyboard in Resources */,
 				0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */,
+				0C9FCA9A1A3BFA2F00BED34F /* Transfer.storyboard in Resources */,
 				0C29051C1A3345E400227B1E /* status.plist in Resources */,
 				0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */,
+				0C9FCA971A3B497A00BED34F /* Bayar.storyboard in Resources */,
 				0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,22 +633,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9FCAB61A3C08C100BED34F /* HistoryTableViewController.m in Sources */,
+				0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */,
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
+				0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */,
 				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
+				0C9FCAAA1A3C011200BED34F /* BayarListTableViewController.m in Sources */,
 				0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */,
+				0C9FCAA31A3BFE4E00BED34F /* TransferTableViewController.m in Sources */,
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
 				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,
 				0C2905001A332BE200227B1E /* RealmManager.m in Sources */,
 				0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */,
 				0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */,
+				0C9FCAB31A3C049E00BED34F /* SharedBeliViewController.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
 				0C2905041A333EB200227B1E /* User.m in Sources */,
 				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
 				0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
+				0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */,
 				0C2905081A333F7400227B1E /* Favorite.m in Sources */,
 				0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
+				0C9FCAA01A3BFE2800BED34F /* TransferViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
