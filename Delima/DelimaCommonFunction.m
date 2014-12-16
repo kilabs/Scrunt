@@ -9,6 +9,7 @@
 #import "DelimaCommonFunction.h"
 #import <sys/sysctl.h>
 #import <CommonCrypto/CommonDigest.h>
+#import <Foundation/Foundation.h>
 @implementation DelimaCommonFunction
 
 + (DelimaCommonFunction *)sharedCommonFunction{
@@ -31,6 +32,34 @@
         [output appendFormat:@"%02x", digest[i]];
     
     return  output;
+    
+}
+-(NSString *)documentPath{
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+}
+
+-(NSString *)pathForFile:(NSString *)fileName{
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *filePath = [documentPath stringByAppendingPathComponent:fileName];
+    return filePath;
+}
+
+-(BOOL)checkIfFileExist:(NSString *)fileName{
+    return [[NSFileManager defaultManager] fileExistsAtPath:[self pathForFile:fileName]];
+}
+
+-(NSArray *)getDocumentDirectoryContents{
+    return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentPath] error:nil];
+}
+
+-(void)deleteItemName:(NSString *)itemName{
+    [[NSFileManager defaultManager]removeItemAtPath:[self pathForFile:itemName] error:nil];
+}
+
+
+-(void)setAlert:(NSString *)title message:(NSString *)message{
+    NSLog(@"title->%@",title);
+    NSLog(@"title->%@",message);
     
 }
 @end

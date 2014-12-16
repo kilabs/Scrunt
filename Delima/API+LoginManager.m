@@ -49,7 +49,6 @@
     return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *postsFromResponse = responseObject;
         NSMutableArray *mutablePosts = [[NSMutableArray alloc]init];
-        NSLog(@"data-->%@",[responseObject objectForKey:@"rc"]);
         if ([[responseObject objectForKey:@"rc"]isEqualToString:@"00"]) {
             
             API_LoginManager *post = [[API_LoginManager alloc]initWithUserBasicAttribute:postsFromResponse];
@@ -69,6 +68,12 @@
                 block([NSArray arrayWithArray:mutablePosts], nil);
             }
         }
+        else{
+             NSLog(@"data-->%@",[responseObject objectForKey:@"rc"]);
+            NSLog(@"data-->%@",[responseObject objectForKey:@"msg"]);
+            [[DelimaCommonFunction sharedCommonFunction]setAlert:@"Error" message:[responseObject objectForKey:@"msg"]];
+            
+        }
         
         
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
@@ -77,19 +82,4 @@
         }
     }];
 }
-//+(void)login:(NSDictionary *)params{
-//    NSLog(@"params-->%@",params);
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
-//                                                       options:NSJSONReadingMutableContainers
-//                                                         error:nil];
-//    NSString* stripped = [NSString stringWithFormat:@"{%@}",[NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil removingNulls:YES ignoreArrays:NO]];
-//    NSLog(@"Stripped-->%@",stripped);
-//    [stripped stringByReplacingOccurrencesOfString:@";" withString:@"\","];
-//    NSLog(@"stripped->%@")
-////    [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@/loginfc2.php",delimaAPIUrl] parameters:stripped success:^(AFHTTPRequestOperation *operation, id responseObject) {
-////        NSLog(@"response object--->%@",[NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil]);
-////    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-////
-////    }];
-//};
 @end

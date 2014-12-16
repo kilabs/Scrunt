@@ -10,7 +10,7 @@
 
 @interface DelimaCommonFunction : NSObject
 
-+ (NSString *)osVersionBuild;
 + (DelimaCommonFunction *)sharedCommonFunction;
 - (NSString *) md5:(NSString *) input;
+- (void)setAlert:(NSString *)title message:(NSString *)message;
 @end
