@@ -8,6 +8,7 @@
 
 #import "BayarListTableViewController.h"
 #import "BarHelper.h"
+#import "SharedBayarDetailViewController.h"
 @interface BayarListTableViewController ()
 
 @end
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setDefaultDelimaNavigationBar];
+    self.tableView.tableFooterView = [[UIView alloc]init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -41,6 +43,30 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 5;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    SharedBayarDetailViewController *destViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"TelkomGroup"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"Telkom Group";
+    }
+    if ([segue.identifier isEqualToString:@"PascaBayar"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"Seluler Pasca Bayar";
+    }
+    if ([segue.identifier isEqualToString:@"PayTV"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"TV Berbayar";
+    }
+    if ([segue.identifier isEqualToString:@"PDAM"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"PDAM";
+    }
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 
 /*

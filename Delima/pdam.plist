@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>kode</key>
+			<string>001302</string>
+			<key>name</key>
+			<string>Denpasar</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001303</string>
+			<key>name</key>
+			<string>Balikpapan</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001304</string>
+			<key>name</key>
+			<string>Manado</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001305</string>
+			<key>name</key>
+			<string>Pontianak</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001306</string>
+			<key>name</key>
+			<string>Boyolali</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001307</string>
+			<key>name</key>
+			<string>Cilacap</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001309</string>
+			<key>name</key>
+			<string>Makassar</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001308</string>
+			<key>name</key>
+			<string>Semarang</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001310</string>
+			<key>name</key>
+			<string>Kuburaya</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>001412</string>
+			<key>name</key>
+			<string>Kab Bogor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -37,7 +37,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grI-JZ-14A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.33333333333337" y="-456.29333333333335"/>
+            <point key="canvasLocation" x="975" y="-457"/>
         </scene>
         <!--Delima-->
         <scene sceneID="Zbq-xA-7y2">

@@ -12,6 +12,8 @@
 #import "LoginViewController.h"
 #import <Realm.h>
 #import "ColorHelper.h"
+#import "Config.h"
+#import "Fee.h"
 #import <SWRevealViewController.h>
 @interface AppDelegate ()
 
@@ -24,6 +26,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    
+    //is that config already setup?
+    
+    if([Config getLocalSyncStatus]){
+        NSLog(@"database %d",[Config getLocalSyncStatus]);
+    }
+    else{
+        NSLog(@"database config %d",[Config getLocalSyncStatus]);
+        [Fee setCelullarFee];
+    }
+    
     
     UIFont *defaultFontType = [UIFont fontWithName:@"Avenir Next"
                                               size:15];

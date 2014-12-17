@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>kode</key>
+			<string>778063</string>
+			<key>name</key>
+			<string>Zynga</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>778064</string>
+			<key>name</key>
+			<string>Angellove</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>778065</string>
+			<key>name</key>
+			<string>Lyto</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>778066</string>
+			<key>name</key>
+			<string>Megaxus</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>778067</string>
+			<key>name</key>
+			<string>Kreon</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>778068</string>
+			<key>name</key>
+			<string>Nusol</string>
+		</dict>
+	</array>
+</dict>
+</plist>

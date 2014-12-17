@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BayarListTableViewController : UITableViewController
-
+@property (nonatomic,strong)NSString *state;
 @end
