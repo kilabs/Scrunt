@@ -20,13 +20,7 @@
 }
 
 +(BOOL)getLocalSyncStatus{
-    Config *isSync = [[Config alloc]init];
-    if (isSync.isAlreadyLocalSync) {
-        return true;
-    }
-    else{
-        return false;
-    }
+    return true;
 }
 
 + (NSString *)primaryKey {

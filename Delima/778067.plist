@@ -6,39 +6,21 @@
 	<array>
 		<dict>
 			<key>kode</key>
-			<integer>5000</integer>
-			<key>sell_price</key>
-			<integer>5400</integer>
-		</dict>
-		<dict>
-			<key>kode</key>
 			<integer>10000</integer>
 			<key>sell_price</key>
-			<integer>10500</integer>
+			<integer>9650</integer>
 		</dict>
 		<dict>
 			<key>kode</key>
 			<integer>20000</integer>
 			<key>sell_price</key>
-			<integer>20600</integer>
+			<integer>18650</integer>
 		</dict>
 		<dict>
 			<key>kode</key>
-			<integer>25000</integer>
+			<integer>30000</integer>
 			<key>sell_price</key>
-			<integer>25650</integer>
-		</dict>
-		<dict>
-			<key>kode</key>
-			<integer>50000</integer>
-			<key>sell_price</key>
-			<integer>51150</integer>
-		</dict>
-		<dict>
-			<key>kode</key>
-			<integer>100000</integer>
-			<key>sell_price</key>
-			<integer>102150</integer>
+			<integer>27650</integer>
 		</dict>
 	</array>
 </dict>

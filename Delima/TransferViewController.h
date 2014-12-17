@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class User;
 @interface TransferViewController : UIViewController
-
+@property (nonatomic,strong)User *user;
 @end

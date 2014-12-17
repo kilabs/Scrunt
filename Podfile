@@ -6,6 +6,7 @@ target 'Delima' do
 	pod 'AFNetworking'
 	pod 'Realm'
 	pod 'JVFloatLabeledTextField'
+    pod 'ActionSheetPicker-3.0'
 	pod 'CRToast'
 	pod 'DZNSegmentedControl'
     pod 'NSJSONSerialization-NSNullRemoval'

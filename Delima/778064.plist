@@ -8,25 +8,13 @@
 			<key>kode</key>
 			<integer>10000</integer>
 			<key>sell_price</key>
-			<integer>10900</integer>
+			<integer>9450</integer>
 		</dict>
 		<dict>
 			<key>kode</key>
-			<integer>25000</integer>
+			<integer>20000</integer>
 			<key>sell_price</key>
-			<integer>25500</integer>
-		</dict>
-		<dict>
-			<key>kode</key>
-			<integer>50000</integer>
-			<key>sell_price</key>
-			<integer>50550</integer>
-		</dict>
-		<dict>
-			<key>kode</key>
-			<integer>100000</integer>
-			<key>sell_price</key>
-			<integer>99100</integer>
+			<integer>18250</integer>
 		</dict>
 	</array>
 </dict>

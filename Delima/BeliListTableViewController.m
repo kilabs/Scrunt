@@ -8,6 +8,7 @@
 
 #import "BeliListTableViewController.h"
 #import "BarHelper.h"
+#import "SharedBeliViewController.h"
 @interface BeliListTableViewController ()
 
 @end
@@ -24,7 +25,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)viewWillAppear:(BOOL)animated{
 
+    [super viewWillAppear:YES];
+   
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,7 +48,21 @@
     // Return the number of rows in the section.
     return 2;
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    SharedBeliViewController *destViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"IsiPulsa"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"TopUp Pulsa";
+    }
+    if ([segue.identifier isEqualToString:@"VoucherGame"]) {
+        destViewController = segue.destinationViewController;
+        destViewController.title = @"Voucher Game";
+    }
+       // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

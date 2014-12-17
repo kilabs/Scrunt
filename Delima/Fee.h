@@ -16,8 +16,9 @@
 @property NSInteger parentCode;
 @property NSInteger basicPrice;
 @property NSInteger salePrice;
-+(NSArray *)getPriceByparentCode:(NSInteger *)parentCode;
++(NSArray *)getPriceByparentCode:(NSInteger)parentCode;
 + (void)save:(Fee *)fee withRevision:(BOOL)revision;
 + (void)setCelullarFee;
 + (void)setGameFee;
+
 @end

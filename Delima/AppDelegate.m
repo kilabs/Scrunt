@@ -27,17 +27,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    
-    //is that config already setup?
-    
-    if([Config getLocalSyncStatus]){
-        NSLog(@"database %d",[Config getLocalSyncStatus]);
-    }
-    else{
-        NSLog(@"database config %d",[Config getLocalSyncStatus]);
+   /// init the data
+    if([Config allObjects].count <=0){
         [Fee setCelullarFee];
     }
+    
     
     
     UIFont *defaultFontType = [UIFont fontWithName:@"Avenir Next"

@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (1.3.9)
   - AFNetworking (2.5.0):
     - AFNetworking/NSURLConnection (= 2.5.0)
     - AFNetworking/NSURLSession (= 2.5.0)
@@ -30,6 +31,7 @@ PODS:
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - AFNetworking
   - CRToast
   - DZNSegmentedControl
@@ -39,6 +41,7 @@ DEPENDENCIES:
   - SWRevealViewController (~> 2.3)
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: e94da444f041f0609a9511bafd9a84f545107026
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   CRToast: f9f2c4b29776d68ba24c4d621cba59a83fea921b
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
