@@ -19,9 +19,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iq0-Y5-oTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="-1015"/>
+            <point key="canvasLocation" x="-221" y="-1015"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Delima-->
         <scene sceneID="IuV-fx-U4j">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="i7W-0f-TE5" customClass="LoginViewController" sceneMemberID="viewController">
@@ -30,8 +30,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y4P-Jg-oEI">
-                                <rect key="frame" x="141" y="166" width="38" height="30"/>
+                                <rect key="frame" x="16" y="400" width="288" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.054901960780000002" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,8 +42,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Glc-dL-ngf">
-                                <rect key="frame" x="114" y="269" width="93" height="30"/>
+                                <rect key="frame" x="16" y="458" width="288" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.054901960780000002" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Aktivasi Akun">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,16 +53,20 @@
                                     <segue destination="7Yj-pr-eDF" kind="push" id="obw-xa-3Uk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Delima_Baru" id="MNR-3f-wRQ">
+                                <rect key="frame" x="10" y="104" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wVx-V3-D7b"/>
+                    <navigationItem key="navigationItem" title="Delima" id="wVx-V3-D7b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSY-b7-PZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="-1015"/>
         </scene>
-        <!--Main Login View Controller-->
+        <!--Login-->
         <scene sceneID="5Pk-MW-96g">
             <objects>
                 <viewController storyboardIdentifier="MainLoginViewController" id="Cwq-Zm-eSl" customClass="MainLoginViewController" sceneMemberID="viewController">
@@ -66,21 +74,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="devlunari" borderStyle="roundedRect" minimumFontSize="17" id="MON-0h-xgA">
-                                <rect key="frame" x="16" y="152" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="devlunari" borderStyle="line" minimumFontSize="17" id="MON-0h-xgA">
+                                <rect key="frame" x="16" y="152" width="288" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="devlunari" borderStyle="roundedRect" minimumFontSize="17" id="JM5-eM-sC1">
-                                <rect key="frame" x="16" y="205" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="devlunari" borderStyle="line" minimumFontSize="17" id="JM5-eM-sC1">
+                                <rect key="frame" x="16" y="205" width="288" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b5g-MM-kmK">
-                                <rect key="frame" x="141" y="253" width="38" height="30"/>
+                                <rect key="frame" x="16" y="261" width="288" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.054901960780000002" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -89,9 +102,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8P6-XH-e5z"/>
+                    <navigationItem key="navigationItem" title="Login" id="8P6-XH-e5z"/>
                     <connections>
                         <outlet property="password" destination="JM5-eM-sC1" id="6qO-Im-qvu"/>
                         <outlet property="userName" destination="MON-0h-xgA" id="YTH-71-boo"/>
@@ -117,6 +130,9 @@
             <point key="canvasLocation" x="857" y="-1194"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Delima_Baru" width="512" height="512"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

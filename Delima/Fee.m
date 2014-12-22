@@ -12,6 +12,7 @@
 #import "RealmManager.h"
 #import "RLMArray.h"
 #import "PropertyHelper.h"
+
 @implementation Fee
 + (NSDictionary *)defaultPropertyValues {
     /*
@@ -41,6 +42,7 @@
         for (int x=0; x<detail.count; x++) {
             Fee *f = [[Fee alloc]init];
              NSLog(@"detail-->%@-->%@",[[detail objectAtIndex:x]objectForKey:@"kode"],[[detail objectAtIndex:x]objectForKey:@"sell_price"]);
+            f.id =rand() % (1 - 100);
             f.parentCode =[[[data objectAtIndex:i]objectForKey:@"kode"]integerValue];
             f.basicPrice =[[[detail objectAtIndex:x]objectForKey:@"kode"]integerValue];
             f.salePrice =[[[detail objectAtIndex:x]objectForKey:@"sell_price"]integerValue];
@@ -59,6 +61,7 @@
         NSArray *detail =[PropertyHelper readFromKeys:@[@"data"] withPropertiesPath:[[data objectAtIndex:i]objectForKey:@"kode"]];
         for (int x=0; x<detail.count; x++) {
             Fee *f = [[Fee alloc]init];
+            f.id =rand() % (101 - 1000);
             f.parentCode =[[[data objectAtIndex:i]objectForKey:@"kode"]integerValue];
             f.basicPrice =[[[detail objectAtIndex:x]objectForKey:@"kode"]integerValue];
             f.salePrice =[[[detail objectAtIndex:x]objectForKey:@"sell_price"]integerValue];
@@ -72,7 +75,7 @@
     NSLog(@"done");
 }
 + (NSString *)primaryKey {
-    return @"guid";
+    return @"id";
 }
 
 +(void)save:(Fee *)fee withRevision:(BOOL)revision{

@@ -21,6 +21,19 @@
     });
     return shared;
 }
+-(NSString *)formatToRupiah:(NSNumber *)charge{
+    
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+    [nf setGroupingSeparator:@"."];
+    nf.usesGroupingSeparator = YES;
+    nf.numberStyle = NSNumberFormatterDecimalStyle;
+    [nf setMaximumFractionDigits:0];
+    nf.roundingMode = NSNumberFormatterRoundFloor;
+    return [nf stringFromNumber:charge];
+}
 -(void)giveBorderTo:(UIView *)view
           withColor:(UIColor *)color{
     CALayer *layer = view.layer;
@@ -103,8 +116,8 @@
 
 
 -(void)setAlert:(NSString *)title message:(NSString *)message{
-    NSLog(@"title->%@",title);
-    NSLog(@"title->%@",message);
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
     
 }
 @end

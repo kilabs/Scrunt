@@ -14,7 +14,7 @@
 - (NSString *) md5:(NSString *) input;
 -(void)giveBorderTo:(UIView *)view
           withColor:(UIColor *)color;
-
+-(NSString *)formatToRupiah:(NSNumber *)nominal;
 -(void)giveBorderTo:(UIView *)view
          withRadius:(float)radius
     withBorderWidth:(float)width

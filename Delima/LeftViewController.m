@@ -16,6 +16,7 @@
 #import "HistoryTableViewController.h"
 #import "BayarListTableViewController.h"
 #import "BeliListTableViewController.h"
+#import "PengaturanTableViewController.h"
 #import <SWRevealViewController.h>
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableVIew;
@@ -102,6 +103,17 @@
         nav.viewControllers = [NSArray arrayWithObjects:controller, nil];
         // Then push the new view controller in the usual way:
         [self.revealViewController pushFrontViewController:nav animated:YES];
+    }
+    if (indexPath.row==6) {
+        // Get the storyboard named secondStoryBoard from the main bundle:
+        storyBoard = [UIStoryboard storyboardWithName:@"Pengaturan" bundle:nil];
+        PengaturanTableViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"PengaturanTableViewController"];
+        nav.viewControllers = [NSArray arrayWithObjects:controller, nil];
+        // Then push the new view controller in the usual way:
+        [self.revealViewController pushFrontViewController:nav animated:YES];
+    }
+    if (indexPath.row ==7) {
+    
     }
     
 }

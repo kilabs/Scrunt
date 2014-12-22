@@ -1,27 +1,24 @@
 //
-//  CashInViewController.m
+//  GantiPinViewController.m
 //  Delima
 //
-//  Created by Arie Prasetyo on 12/13/14.
+//  Created by Arie Prasetyo on 12/22/14.
 //  Copyright (c) 2014 netra. All rights reserved.
 //
 
-#import "CashInViewController.h"
-#import "BarHelper.h"
-@interface CashInViewController ()
-@property (strong, nonatomic) IBOutlet UITextField *nomorTujuan;
-@property (strong, nonatomic) IBOutlet UITextField *nominal;
-@property (strong, nonatomic) IBOutlet UIButton *kirimButton;
+#import "GantiPinViewController.h"
+
+@interface GantiPinViewController ()<UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *pinLama;
+@property (strong, nonatomic) IBOutlet UITextField *pinBaru;
+@property (strong, nonatomic) IBOutlet UITextField *konfirmPin;
 
 @end
 
-@implementation CashInViewController
+@implementation GantiPinViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _nomorTujuan.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-    _nominal.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-    [self setDefaultDelimaNavigationBar];
     // Do any additional setup after loading the view.
 }
 
@@ -29,9 +26,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)sendToServer:(id)sender {
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+     
+    return YES;
 }
-
 /*
 #pragma mark - Navigation
 

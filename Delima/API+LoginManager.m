@@ -11,6 +11,7 @@
 #import "globalVariable.h"
 #import "delimaAPIManager.h"
 #import "User.h"
+#import <MBProgressHUD.h>
 #import <NSJSONSerialization+RemovingNulls.h>
 @implementation API_LoginManager
 /*
@@ -69,9 +70,13 @@
             }
         }
         else{
-             NSLog(@"data-->%@",[responseObject objectForKey:@"rc"]);
+            NSLog(@"data-->%@",[responseObject objectForKey:@"rc"]);
             NSLog(@"data-->%@",[responseObject objectForKey:@"msg"]);
+            
             [[DelimaCommonFunction sharedCommonFunction]setAlert:@"Error" message:[responseObject objectForKey:@"msg"]];
+            if (block) {
+                block([NSArray arrayWithArray:mutablePosts], nil);
+            }
             
         }
         
