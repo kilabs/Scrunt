@@ -21,12 +21,13 @@
 		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
 		0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */; };
 		0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */; };
+		0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425411A471EEE00DDAE72 /* API+BeliManager.m */; };
 		0C96A69F1A419D510092B5E2 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68B1A419D510092B5E2 /* bank.plist */; };
 		0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68C1A419D510092B5E2 /* Voucher Game.plist */; };
 		0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */; };
-		0C96A6A21A419D510092B5E2 /* pascabayar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68E1A419D510092B5E2 /* pascabayar.plist */; };
-		0C96A6A31A419D510092B5E2 /* paytv.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68F1A419D510092B5E2 /* paytv.plist */; };
-		0C96A6A41A419D510092B5E2 /* pdam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6901A419D510092B5E2 /* pdam.plist */; };
+		0C96A6A21A419D510092B5E2 /* Seluler Pasca Bayar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */; };
+		0C96A6A31A419D510092B5E2 /* TV Berbayar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */; };
+		0C96A6A41A419D510092B5E2 /* PDAM.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6901A419D510092B5E2 /* PDAM.plist */; };
 		0C96A6A51A419D510092B5E2 /* 777010.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6921A419D510092B5E2 /* 777010.plist */; };
 		0C96A6A61A419D510092B5E2 /* 777019.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6931A419D510092B5E2 /* 777019.plist */; };
 		0C96A6A71A419D510092B5E2 /* 777020.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6941A419D510092B5E2 /* 777020.plist */; };
@@ -39,7 +40,7 @@
 		0C96A6AE1A419D510092B5E2 /* 777091.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69B1A419D510092B5E2 /* 777091.plist */; };
 		0C96A6AF1A419D510092B5E2 /* 777092.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69C1A419D510092B5E2 /* 777092.plist */; };
 		0C96A6B01A419D510092B5E2 /* 777093.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69D1A419D510092B5E2 /* 777093.plist */; };
-		0C96A6B11A419D510092B5E2 /* telkomgrup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69E1A419D510092B5E2 /* telkomgrup.plist */; };
+		0C96A6B11A419D510092B5E2 /* Telkom Group.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69E1A419D510092B5E2 /* Telkom Group.plist */; };
 		0C96A6B91A41A0650092B5E2 /* 778063.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B31A41A0650092B5E2 /* 778063.plist */; };
 		0C96A6BA1A41A0650092B5E2 /* 778064.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B41A41A0650092B5E2 /* 778064.plist */; };
 		0C96A6BB1A41A0650092B5E2 /* 778065.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B51A41A0650092B5E2 /* 778065.plist */; };
@@ -114,12 +115,14 @@
 		0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+LoginManager.h"; sourceTree = "<group>"; };
 		0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+LoginManager.m"; sourceTree = "<group>"; };
+		0C7425401A471EEE00DDAE72 /* API+BeliManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+BeliManager.h"; sourceTree = "<group>"; };
+		0C7425411A471EEE00DDAE72 /* API+BeliManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+BeliManager.m"; sourceTree = "<group>"; };
 		0C96A68B1A419D510092B5E2 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		0C96A68C1A419D510092B5E2 /* Voucher Game.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voucher Game.plist"; sourceTree = "<group>"; };
 		0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TopUp Pulsa.plist"; sourceTree = "<group>"; };
-		0C96A68E1A419D510092B5E2 /* pascabayar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pascabayar.plist; sourceTree = "<group>"; };
-		0C96A68F1A419D510092B5E2 /* paytv.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = paytv.plist; sourceTree = "<group>"; };
-		0C96A6901A419D510092B5E2 /* pdam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pdam.plist; sourceTree = "<group>"; };
+		0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Seluler Pasca Bayar.plist"; sourceTree = "<group>"; };
+		0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TV Berbayar.plist"; sourceTree = "<group>"; };
+		0C96A6901A419D510092B5E2 /* PDAM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PDAM.plist; sourceTree = "<group>"; };
 		0C96A6921A419D510092B5E2 /* 777010.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777010.plist; sourceTree = "<group>"; };
 		0C96A6931A419D510092B5E2 /* 777019.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777019.plist; sourceTree = "<group>"; };
 		0C96A6941A419D510092B5E2 /* 777020.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777020.plist; sourceTree = "<group>"; };
@@ -132,7 +135,7 @@
 		0C96A69B1A419D510092B5E2 /* 777091.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777091.plist; sourceTree = "<group>"; };
 		0C96A69C1A419D510092B5E2 /* 777092.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777092.plist; sourceTree = "<group>"; };
 		0C96A69D1A419D510092B5E2 /* 777093.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777093.plist; sourceTree = "<group>"; };
-		0C96A69E1A419D510092B5E2 /* telkomgrup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = telkomgrup.plist; sourceTree = "<group>"; };
+		0C96A69E1A419D510092B5E2 /* Telkom Group.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Telkom Group.plist"; sourceTree = "<group>"; };
 		0C96A6B31A41A0650092B5E2 /* 778063.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778063.plist; sourceTree = "<group>"; };
 		0C96A6B41A41A0650092B5E2 /* 778064.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778064.plist; sourceTree = "<group>"; };
 		0C96A6B51A41A0650092B5E2 /* 778065.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778065.plist; sourceTree = "<group>"; };
@@ -248,11 +251,11 @@
 				0C96A68B1A419D510092B5E2 /* bank.plist */,
 				0C96A68C1A419D510092B5E2 /* Voucher Game.plist */,
 				0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */,
-				0C96A68E1A419D510092B5E2 /* pascabayar.plist */,
-				0C96A68F1A419D510092B5E2 /* paytv.plist */,
-				0C96A6901A419D510092B5E2 /* pdam.plist */,
+				0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */,
+				0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */,
+				0C96A6901A419D510092B5E2 /* PDAM.plist */,
 				0C96A6911A419D510092B5E2 /* seluler */,
-				0C96A69E1A419D510092B5E2 /* telkomgrup.plist */,
+				0C96A69E1A419D510092B5E2 /* Telkom Group.plist */,
 			);
 			name = "Static Data";
 			sourceTree = "<group>";
@@ -323,6 +326,13 @@
 				0C30560A1A31F3F600F4D4B2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C74254B1A47BE6300DDAE72 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Invoice;
 			sourceTree = "<group>";
 		};
 		0C96A6911A419D510092B5E2 /* seluler */ = {
@@ -447,6 +457,7 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C74254B1A47BE6300DDAE72 /* Invoice */,
 				0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */,
 				0C9FCA8F1A3B44E300BED34F /* History Online */,
 				0C9FCA8E1A3B44DF00BED34F /* Bayar */,
@@ -507,6 +518,8 @@
 		0CAAD2FC1A32227200DE3B5B /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0C7425401A471EEE00DDAE72 /* API+BeliManager.h */,
+				0C7425411A471EEE00DDAE72 /* API+BeliManager.m */,
 				0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */,
 				0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */,
 				0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */,
@@ -704,7 +717,7 @@
 				0C96A6B91A41A0650092B5E2 /* 778063.plist in Resources */,
 				0C96A6AD1A419D510092B5E2 /* 777090.plist in Resources */,
 				0C96A6BB1A41A0650092B5E2 /* 778065.plist in Resources */,
-				0C96A6A31A419D510092B5E2 /* paytv.plist in Resources */,
+				0C96A6A31A419D510092B5E2 /* TV Berbayar.plist in Resources */,
 				0C96A6B01A419D510092B5E2 /* 777093.plist in Resources */,
 				0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */,
 				0C96A6A81A419D510092B5E2 /* 777030.plist in Resources */,
@@ -712,11 +725,11 @@
 				0C96A6AA1A419D510092B5E2 /* 777050.plist in Resources */,
 				0C96A6A51A419D510092B5E2 /* 777010.plist in Resources */,
 				0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */,
-				0C96A6A41A419D510092B5E2 /* pdam.plist in Resources */,
+				0C96A6A41A419D510092B5E2 /* PDAM.plist in Resources */,
 				0C96A6A91A419D510092B5E2 /* 777040.plist in Resources */,
 				0C9FCA951A3B496F00BED34F /* Beli.storyboard in Resources */,
 				0C96A69F1A419D510092B5E2 /* bank.plist in Resources */,
-				0C96A6A21A419D510092B5E2 /* pascabayar.plist in Resources */,
+				0C96A6A21A419D510092B5E2 /* Seluler Pasca Bayar.plist in Resources */,
 				0C9FCAA51A3BFF5C00BED34F /* History.storyboard in Resources */,
 				0C96A6BA1A41A0650092B5E2 /* 778064.plist in Resources */,
 				0C96A6AB1A419D510092B5E2 /* 777060.plist in Resources */,
@@ -724,7 +737,7 @@
 				0C96A6BE1A41A0650092B5E2 /* 778068.plist in Resources */,
 				0C96A6AC1A419D510092B5E2 /* 777080.plist in Resources */,
 				0C9FCA9A1A3BFA2F00BED34F /* Transfer.storyboard in Resources */,
-				0C96A6B11A419D510092B5E2 /* telkomgrup.plist in Resources */,
+				0C96A6B11A419D510092B5E2 /* Telkom Group.plist in Resources */,
 				0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */,
 				0C96A6BC1A41A0650092B5E2 /* 778066.plist in Resources */,
 				0C9FCA971A3B497A00BED34F /* Bayar.storyboard in Resources */,
@@ -802,6 +815,7 @@
 				0C2905041A333EB200227B1E /* User.m in Sources */,
 				0C1B88651A40746C00266057 /* PropertyHelper.m in Sources */,
 				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
+				0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */,
 				0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
 				0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */,

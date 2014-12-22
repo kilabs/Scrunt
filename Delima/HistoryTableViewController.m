@@ -8,6 +8,7 @@
 
 #import "HistoryTableViewController.h"
 #import "BarHelper.h"
+#import <MBProgressHUD.h>
 @interface HistoryTableViewController ()
 
 @end
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setDefaultDelimaNavigationBar];
+    self.tableView.tableFooterView = [[UIView alloc]init];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

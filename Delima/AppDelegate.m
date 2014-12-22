@@ -11,6 +11,7 @@
 #import "LeftViewController.h"
 #import "LoginViewController.h"
 #import <Realm.h>
+#import "PropertyHelper.h"
 #import "ColorHelper.h"
 #import "Config.h"
 #import "Fee.h"
@@ -32,7 +33,9 @@
         [Fee setCelullarFee];
     }
     
-    
+    //  Back button configuration
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
     
     UIFont *defaultFontType = [UIFont fontWithName:@"Avenir Next"
                                               size:15];
@@ -53,6 +56,7 @@
     
     //  Navigation bar configuration
     [[UINavigationBar appearance] setBarTintColor:[UIColor delimaRedColor]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor delimaRedColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:titleFontAttributes];
     
@@ -77,7 +81,6 @@
                                                     barMetrics:UIBarMetricsDefault];
     return YES;
 }
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

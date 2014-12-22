@@ -24,6 +24,7 @@ PODS:
   - CRToast (0.0.7)
   - DZNSegmentedControl (1.2.2)
   - JVFloatLabeledTextField (1.0.0)
+  - MBProgressHUD (0.9)
   - NSJSONSerialization-NSNullRemoval (1.0.1)
   - Realm (0.88.0):
     - Realm/Headers (= 0.88.0)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - CRToast
   - DZNSegmentedControl
   - JVFloatLabeledTextField
+  - MBProgressHUD
   - NSJSONSerialization-NSNullRemoval
   - Realm
   - SWRevealViewController (~> 2.3)
@@ -46,6 +48,7 @@ SPEC CHECKSUMS:
   CRToast: f9f2c4b29776d68ba24c4d621cba59a83fea921b
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
   JVFloatLabeledTextField: c2b8124e439cf2b05fe5bb38f44358743588c1bd
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   NSJSONSerialization-NSNullRemoval: b3f02955f898d01205567e3f1292e4aae3ad547e
   Realm: 56fd06bf4e97da2829f864e2bca229a060825c61
   SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77

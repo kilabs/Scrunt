@@ -13,6 +13,7 @@
 #import "ViewController.h"
 #import "ViewController.h"
 #import "TransferTableViewController.h"
+#import "HistoryTableViewController.h"
 #import "BayarListTableViewController.h"
 #import "BeliListTableViewController.h"
 #import <SWRevealViewController.h>
@@ -90,6 +91,14 @@
         // Get the storyboard named secondStoryBoard from the main bundle:
         storyBoard = [UIStoryboard storyboardWithName:@"Bayar" bundle:nil];
         BayarListTableViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"BayarList"];
+        nav.viewControllers = [NSArray arrayWithObjects:controller, nil];
+        // Then push the new view controller in the usual way:
+        [self.revealViewController pushFrontViewController:nav animated:YES];
+    }
+    if (indexPath.row==5) {
+        // Get the storyboard named secondStoryBoard from the main bundle:
+        storyBoard = [UIStoryboard storyboardWithName:@"History" bundle:nil];
+        BayarListTableViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"HistoryTableViewController"];
         nav.viewControllers = [NSArray arrayWithObjects:controller, nil];
         // Then push the new view controller in the usual way:
         [self.revealViewController pushFrontViewController:nav animated:YES];

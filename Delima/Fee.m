@@ -10,6 +10,7 @@
 #import "Config.h"
 #import <Realm.h>
 #import "RealmManager.h"
+#import "RLMArray.h"
 #import "PropertyHelper.h"
 @implementation Fee
 + (NSDictionary *)defaultPropertyValues {
@@ -35,17 +36,18 @@
 + (void)setCelullarFee{
     NSArray *data = [NSArray arrayWithArray:[PropertyHelper readFromKeys:@[@"data"] withPropertiesPath:@"TopUp Pulsa"]];
     for (int i=0;i<data.count; i++) {
-        
+        NSLog(@"data-->%@-->%@",[[data objectAtIndex:i]objectForKey:@"name"],[[data objectAtIndex:i]objectForKey:@"kode"]);
         NSArray *detail =[PropertyHelper readFromKeys:@[@"data"] withPropertiesPath:[[data objectAtIndex:i]objectForKey:@"kode"]];
         for (int x=0; x<detail.count; x++) {
             Fee *f = [[Fee alloc]init];
+             NSLog(@"detail-->%@-->%@",[[detail objectAtIndex:x]objectForKey:@"kode"],[[detail objectAtIndex:x]objectForKey:@"sell_price"]);
             f.parentCode =[[[data objectAtIndex:i]objectForKey:@"kode"]integerValue];
             f.basicPrice =[[[detail objectAtIndex:x]objectForKey:@"kode"]integerValue];
             f.salePrice =[[[detail objectAtIndex:x]objectForKey:@"sell_price"]integerValue];
             [Fee save:f withRevision:NO];
         }
     }
-    
+    NSLog(@"data-->%@",[Fee allObjects]);
     [Fee setGameFee];
 }
 
@@ -83,6 +85,7 @@
 
 +(NSArray *)getPriceByparentCode:(NSInteger)parentCode{
     RLMResults *objects = [Fee objectsWhere:@"parentCode = %d",parentCode];
+    NSLog(@"object->%@",objects);
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:objects.count];
     for(id object in objects) {
         Fee *item = [[Fee alloc] initWithObject:object];

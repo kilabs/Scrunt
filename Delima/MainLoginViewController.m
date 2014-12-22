@@ -33,7 +33,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginPressed:(id)sender {
-    NSLog(@"Fee-->%@",[Fee allObjects]);
     NSDictionary *params = @{@"uname":_userName.text,
                              @"passwd":[[DelimaCommonFunction sharedCommonFunction]md5:_password.text],
                              @"terminal":[[NSUUID UUID] UUIDString],
