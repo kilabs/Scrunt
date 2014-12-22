@@ -7,20 +7,80 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "LeftViewController.h"
+#import "LoginViewController.h"
+#import <Realm.h>
+#import "PropertyHelper.h"
+#import "ColorHelper.h"
+#import "Config.h"
+#import "Fee.h"
+#import <SWRevealViewController.h>
 @interface AppDelegate ()
 
 @end
+@interface AppDelegate()<SWRevealViewControllerDelegate>
+@end
+
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-
-
+   /// init the data
+    if([Config allObjects].count <=0){
+        [Fee setCelullarFee];
+    }
+    
+    //  Back button configuration
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
+    UIFont *defaultFontType = [UIFont fontWithName:@"Avenir Next"
+                                              size:15];
+    
+    NSDictionary *defaultFontAttributes = [NSDictionary dictionaryWithObject:defaultFontType
+                                                                      forKey:NSFontAttributeName];
+    
+    //  Title font configuration
+    UIFont *titleFontType = [UIFont fontWithName:@"Avenir Next"
+                                            size:17];
+    
+    NSDictionary *titleFontAttributes = [NSDictionary dictionaryWithObjects:@[titleFontType, [UIColor whiteColor]]
+                                                                    forKeys:@[NSFontAttributeName, NSForegroundColorAttributeName]];
+    
+    //  Segmented control configuration
+    [[UISegmentedControl appearance] setTitleTextAttributes:defaultFontAttributes
+                                                   forState:UIControlStateNormal];
+    
+    //  Navigation bar configuration
+    [[UINavigationBar appearance] setBarTintColor:[UIColor delimaRedColor]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor delimaRedColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleFontAttributes];
+    
+    //  Navigation bar button item configuration
+    [[UIBarButtonItem appearance] setTitleTextAttributes:defaultFontAttributes
+                                                forState:UIControlStateNormal];
+    
+    //  Back button configuration
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
+    UIImage *originalBackButtonImage = [UIImage imageNamed:@"icon-back.png"];
+    CGSize backButtonSize = CGSizeMake(33, 33);
+    UIGraphicsBeginImageContextWithOptions(backButtonSize, NO, 0.0);
+    [originalBackButtonImage drawInRect:CGRectMake(0, 0, backButtonSize.width, backButtonSize.height)];
+    UIImage *backButtonImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    backButtonImage = [backButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 33, 0, 0)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
     return YES;
 }
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

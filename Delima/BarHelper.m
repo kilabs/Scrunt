@@ -7,15 +7,42 @@
 //
 
 #import "BarHelper.h"
+#import <SWRevealViewController.h>
+@implementation UIViewController(BarHelper)
 
-@implementation BarHelper
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setLeftNavigationBar {
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                                                                   target:nil
+                                                                                   action:nil];
+    negativeSpacer.width = -10;
+    
+    UIButton *sidebarButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    CGRect sidebarButtonFrame = sidebarButton.frame;
+    sidebarButtonFrame.size.width = 32;
+    sidebarButtonFrame.size.height = 32;
+    
+    sidebarButton.frame = sidebarButtonFrame;
+    
+    [sidebarButton setImage:[UIImage imageNamed:@"icon-sidebar.png"]
+                   forState:UIControlStateNormal];
+    
+    [sidebarButton addTarget:self
+                      action:@selector(sidebarButtonTouched)
+            forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *sidebarBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:sidebarButton];
+    
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer, sidebarBarButtonItem];
 }
-*/
-
+- (void)setDefaultDelimaNavigationBar {
+    [self setLeftNavigationBar];
+}
+- (void)sidebarButtonTouched {
+    [self.revealViewController revealToggle:nil];
+    self.revealViewController.frontViewShadowOffset = CGSizeMake(0, 0);
+    self.revealViewController.frontViewShadowOpacity = 0.0f;
+    self.revealViewController.frontViewShadowRadius = 0.0f;
+    
+}
 @end

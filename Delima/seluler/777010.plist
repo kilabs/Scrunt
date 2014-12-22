@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>kode</key>
+			<string>5000</string>
+			<key>sell_price</key>
+			<integer>5550</integer>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>10000</string>
+			<key>sell_price</key>
+			<integer>10600</integer>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>25000</string>
+			<key>sell_price</key>
+			<integer>25200</integer>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>50000</string>
+			<key>sell_price</key>
+			<integer>49700</integer>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>100000</string>
+			<key>sell_price</key>
+			<integer>99200</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BarHelper : UINavigationBar
-
+@interface UIViewController(BarHelper)
+- (void)setDefaultDelimaNavigationBar;
 @end

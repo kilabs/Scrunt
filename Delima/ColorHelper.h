@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorHelper : UIColor
-
+@interface UIColor(ColorHelper)
++ (UIColor *)delimaRedColor;
++ (UIColor *)delimaGrayColor;
++ (UIColor *)delimaDarkRedColor;
++ (UIColor *)delimaYellowColor;
++ (UIColor *)delimaGreenColor;
++ (UIColor *)delimaBlueColor;
++ (UIColor *)delimaDarkGrayColor;
++ (UIColor *)delimaLightGrayColor;
++ (UIColor *)delimaSuperLightGrayColor;
++ (UIColor *)delimaF7Color;
 @end

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>kode</key>
+			<string>1001</string>
+			<key>name</key>
+			<string>Trans Vision</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>90001</string>
+			<key>name</key>
+			<string>Indovision</string>
+		</dict>
+		<dict>
+			<key>kode</key>
+			<string>6001</string>
+			<key>name</key>
+			<string>Aora TV</string>
+		</dict>
+	</array>
+</dict>
+</plist>

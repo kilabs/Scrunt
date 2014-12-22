@@ -7,16 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1B885A1A406D6200266057 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B88591A406D6200266057 /* Config.m */; };
+		0C1B885E1A40711A00266057 /* Fee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B885D1A40711A00266057 /* Fee.m */; };
+		0C1B88651A40746C00266057 /* PropertyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B88641A40746C00266057 /* PropertyHelper.m */; };
+		0C2905001A332BE200227B1E /* RealmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2904FF1A332BE200227B1E /* RealmManager.m */; };
+		0C2905041A333EB200227B1E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2905031A333EB200227B1E /* User.m */; };
+		0C2905081A333F7400227B1E /* Favorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2905071A333F7400227B1E /* Favorite.m */; };
 		0C3055F21A31F3F600F4D4B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F11A31F3F600F4D4B2 /* main.m */; };
 		0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F41A31F3F600F4D4B2 /* AppDelegate.m */; };
 		0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F71A31F3F600F4D4B2 /* ViewController.m */; };
 		0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */; };
 		0C30560C1A31F3F600F4D4B2 /* DelimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */; };
+		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
+		0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */; };
+		0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */; };
+		0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425411A471EEE00DDAE72 /* API+BeliManager.m */; };
+		0C7425511A47EF2800DDAE72 /* PengaturanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425501A47EF2800DDAE72 /* PengaturanTableViewController.m */; };
+		0C7425531A47F09D00DDAE72 /* Fee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7425521A47F09D00DDAE72 /* Fee.storyboard */; };
+		0C74255D1A4803C700DDAE72 /* FeeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74255C1A4803C700DDAE72 /* FeeTableViewController.m */; };
+		0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425621A48197400DDAE72 /* FeeDetailViewController.m */; };
+		0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425661A48376200DDAE72 /* GantiPinViewController.m */; };
+		0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */; };
+		0C96A69F1A419D510092B5E2 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68B1A419D510092B5E2 /* bank.plist */; };
+		0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68C1A419D510092B5E2 /* Voucher Game.plist */; };
+		0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */; };
+		0C96A6A21A419D510092B5E2 /* Seluler Pasca Bayar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */; };
+		0C96A6A31A419D510092B5E2 /* TV Berbayar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */; };
+		0C96A6A41A419D510092B5E2 /* PDAM.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6901A419D510092B5E2 /* PDAM.plist */; };
+		0C96A6A51A419D510092B5E2 /* 777010.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6921A419D510092B5E2 /* 777010.plist */; };
+		0C96A6A61A419D510092B5E2 /* 777019.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6931A419D510092B5E2 /* 777019.plist */; };
+		0C96A6A71A419D510092B5E2 /* 777020.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6941A419D510092B5E2 /* 777020.plist */; };
+		0C96A6A81A419D510092B5E2 /* 777030.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6951A419D510092B5E2 /* 777030.plist */; };
+		0C96A6A91A419D510092B5E2 /* 777040.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6961A419D510092B5E2 /* 777040.plist */; };
+		0C96A6AA1A419D510092B5E2 /* 777050.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6971A419D510092B5E2 /* 777050.plist */; };
+		0C96A6AB1A419D510092B5E2 /* 777060.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6981A419D510092B5E2 /* 777060.plist */; };
+		0C96A6AC1A419D510092B5E2 /* 777080.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6991A419D510092B5E2 /* 777080.plist */; };
+		0C96A6AD1A419D510092B5E2 /* 777090.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69A1A419D510092B5E2 /* 777090.plist */; };
+		0C96A6AE1A419D510092B5E2 /* 777091.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69B1A419D510092B5E2 /* 777091.plist */; };
+		0C96A6AF1A419D510092B5E2 /* 777092.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69C1A419D510092B5E2 /* 777092.plist */; };
+		0C96A6B01A419D510092B5E2 /* 777093.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69D1A419D510092B5E2 /* 777093.plist */; };
+		0C96A6B11A419D510092B5E2 /* Telkom Group.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A69E1A419D510092B5E2 /* Telkom Group.plist */; };
+		0C96A6B91A41A0650092B5E2 /* 778063.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B31A41A0650092B5E2 /* 778063.plist */; };
+		0C96A6BA1A41A0650092B5E2 /* 778064.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B41A41A0650092B5E2 /* 778064.plist */; };
+		0C96A6BB1A41A0650092B5E2 /* 778065.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B51A41A0650092B5E2 /* 778065.plist */; };
+		0C96A6BC1A41A0650092B5E2 /* 778066.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B61A41A0650092B5E2 /* 778066.plist */; };
+		0C96A6BD1A41A0650092B5E2 /* 778067.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B71A41A0650092B5E2 /* 778067.plist */; };
+		0C96A6BE1A41A0650092B5E2 /* 778068.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A6B81A41A0650092B5E2 /* 778068.plist */; };
+		0C96A6C41A41BDBE0092B5E2 /* API+TransferBankManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C96A6C31A41BDBE0092B5E2 /* API+TransferBankManager.m */; };
+		0C9FCA931A3B496000BED34F /* Cashin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA921A3B496000BED34F /* Cashin.storyboard */; };
+		0C9FCA951A3B496F00BED34F /* Beli.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA941A3B496F00BED34F /* Beli.storyboard */; };
+		0C9FCA971A3B497A00BED34F /* Bayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA961A3B497A00BED34F /* Bayar.storyboard */; };
+		0C9FCA9A1A3BFA2F00BED34F /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */; };
+		0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */; };
+		0C9FCAA01A3BFE2800BED34F /* TransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */; };
+		0C9FCAA31A3BFE4E00BED34F /* TransferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */; };
+		0C9FCAA51A3BFF5C00BED34F /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA41A3BFF5C00BED34F /* History.storyboard */; };
+		0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */; };
+		0C9FCAAA1A3C011200BED34F /* BayarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */; };
+		0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */; };
+		0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */; };
+		0C9FCAB31A3C049E00BED34F /* SharedBeliViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */; };
+		0C9FCAB61A3C08C100BED34F /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */; };
 		0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */; };
 		0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E51A320ED100DE3B5B /* Main.storyboard */; };
 		0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2E91A32120300DE3B5B /* LeftViewController.m */; };
 		0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F61A32217100DE3B5B /* BarHelper.m */; };
 		0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2F91A32218200DE3B5B /* ColorHelper.m */; };
+		0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2FF1A32230300DE3B5B /* globalVariable.m */; };
+		0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */; };
+		0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3161A32856A00DE3B5B /* MenuCell.m */; };
+		0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13BE1A3430380074B6CF /* LoginViewController.m */; };
+		0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */; };
 		23F0F348DE0464F21073F790 /* libPods-Delima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +93,18 @@
 
 /* Begin PBXFileReference section */
 		082D33E1F53ABADDD871A6AF /* Pods-Delima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.debug.xcconfig"; sourceTree = "<group>"; };
+		0C1B88581A406D6200266057 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		0C1B88591A406D6200266057 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		0C1B885C1A40711A00266057 /* Fee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fee.h; sourceTree = "<group>"; };
+		0C1B885D1A40711A00266057 /* Fee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fee.m; sourceTree = "<group>"; };
+		0C1B88631A40746C00266057 /* PropertyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyHelper.h; sourceTree = "<group>"; };
+		0C1B88641A40746C00266057 /* PropertyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyHelper.m; sourceTree = "<group>"; };
+		0C2904FE1A332BE200227B1E /* RealmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmManager.h; sourceTree = "<group>"; };
+		0C2904FF1A332BE200227B1E /* RealmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmManager.m; sourceTree = "<group>"; };
+		0C2905021A333EB200227B1E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0C2905031A333EB200227B1E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0C2905061A333F7400227B1E /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
+		0C2905071A333F7400227B1E /* Favorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorite.m; sourceTree = "<group>"; };
 		0C3055EC1A31F3F600F4D4B2 /* Delima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3055F01A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C3055F11A31F3F600F4D4B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +116,73 @@
 		0C3056051A31F3F600F4D4B2 /* DelimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C30560A1A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelimaTests.m; sourceTree = "<group>"; };
+		0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimaCommonFunction.h; sourceTree = "<group>"; };
+		0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimaCommonFunction.m; sourceTree = "<group>"; };
+		0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+LoginManager.h"; sourceTree = "<group>"; };
+		0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+LoginManager.m"; sourceTree = "<group>"; };
+		0C7425401A471EEE00DDAE72 /* API+BeliManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+BeliManager.h"; sourceTree = "<group>"; };
+		0C7425411A471EEE00DDAE72 /* API+BeliManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+BeliManager.m"; sourceTree = "<group>"; };
+		0C74254F1A47EF2800DDAE72 /* PengaturanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PengaturanTableViewController.h; sourceTree = "<group>"; };
+		0C7425501A47EF2800DDAE72 /* PengaturanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PengaturanTableViewController.m; sourceTree = "<group>"; };
+		0C7425521A47F09D00DDAE72 /* Fee.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fee.storyboard; sourceTree = "<group>"; };
+		0C74255B1A4803C700DDAE72 /* FeeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeTableViewController.h; sourceTree = "<group>"; };
+		0C74255C1A4803C700DDAE72 /* FeeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeTableViewController.m; sourceTree = "<group>"; };
+		0C7425611A48197400DDAE72 /* FeeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeDetailViewController.h; sourceTree = "<group>"; };
+		0C7425621A48197400DDAE72 /* FeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeDetailViewController.m; sourceTree = "<group>"; };
+		0C7425651A48376200DDAE72 /* GantiPinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GantiPinViewController.h; sourceTree = "<group>"; };
+		0C7425661A48376200DDAE72 /* GantiPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GantiPinViewController.m; sourceTree = "<group>"; };
+		0C7425691A48396700DDAE72 /* AktivasiAkunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AktivasiAkunViewController.h; sourceTree = "<group>"; };
+		0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AktivasiAkunViewController.m; sourceTree = "<group>"; };
+		0C96A68B1A419D510092B5E2 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
+		0C96A68C1A419D510092B5E2 /* Voucher Game.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voucher Game.plist"; sourceTree = "<group>"; };
+		0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TopUp Pulsa.plist"; sourceTree = "<group>"; };
+		0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Seluler Pasca Bayar.plist"; sourceTree = "<group>"; };
+		0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TV Berbayar.plist"; sourceTree = "<group>"; };
+		0C96A6901A419D510092B5E2 /* PDAM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PDAM.plist; sourceTree = "<group>"; };
+		0C96A6921A419D510092B5E2 /* 777010.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777010.plist; sourceTree = "<group>"; };
+		0C96A6931A419D510092B5E2 /* 777019.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777019.plist; sourceTree = "<group>"; };
+		0C96A6941A419D510092B5E2 /* 777020.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777020.plist; sourceTree = "<group>"; };
+		0C96A6951A419D510092B5E2 /* 777030.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777030.plist; sourceTree = "<group>"; };
+		0C96A6961A419D510092B5E2 /* 777040.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777040.plist; sourceTree = "<group>"; };
+		0C96A6971A419D510092B5E2 /* 777050.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777050.plist; sourceTree = "<group>"; };
+		0C96A6981A419D510092B5E2 /* 777060.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777060.plist; sourceTree = "<group>"; };
+		0C96A6991A419D510092B5E2 /* 777080.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777080.plist; sourceTree = "<group>"; };
+		0C96A69A1A419D510092B5E2 /* 777090.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777090.plist; sourceTree = "<group>"; };
+		0C96A69B1A419D510092B5E2 /* 777091.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777091.plist; sourceTree = "<group>"; };
+		0C96A69C1A419D510092B5E2 /* 777092.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777092.plist; sourceTree = "<group>"; };
+		0C96A69D1A419D510092B5E2 /* 777093.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 777093.plist; sourceTree = "<group>"; };
+		0C96A69E1A419D510092B5E2 /* Telkom Group.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Telkom Group.plist"; sourceTree = "<group>"; };
+		0C96A6B31A41A0650092B5E2 /* 778063.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778063.plist; sourceTree = "<group>"; };
+		0C96A6B41A41A0650092B5E2 /* 778064.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778064.plist; sourceTree = "<group>"; };
+		0C96A6B51A41A0650092B5E2 /* 778065.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778065.plist; sourceTree = "<group>"; };
+		0C96A6B61A41A0650092B5E2 /* 778066.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778066.plist; sourceTree = "<group>"; };
+		0C96A6B71A41A0650092B5E2 /* 778067.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778067.plist; sourceTree = "<group>"; };
+		0C96A6B81A41A0650092B5E2 /* 778068.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 778068.plist; sourceTree = "<group>"; };
+		0C96A6C21A41BDBE0092B5E2 /* API+TransferBankManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+TransferBankManager.h"; sourceTree = "<group>"; };
+		0C96A6C31A41BDBE0092B5E2 /* API+TransferBankManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+TransferBankManager.m"; sourceTree = "<group>"; };
+		0C9FCA921A3B496000BED34F /* Cashin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cashin.storyboard; sourceTree = "<group>"; };
+		0C9FCA941A3B496F00BED34F /* Beli.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Beli.storyboard; sourceTree = "<group>"; };
+		0C9FCA961A3B497A00BED34F /* Bayar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bayar.storyboard; sourceTree = "<group>"; };
+		0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
+		0C9FCA9B1A3BFCD800BED34F /* CashInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashInViewController.h; sourceTree = "<group>"; };
+		0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashInViewController.m; sourceTree = "<group>"; };
+		0C9FCA9E1A3BFE2800BED34F /* TransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferViewController.h; sourceTree = "<group>"; };
+		0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferViewController.m; sourceTree = "<group>"; };
+		0C9FCAA11A3BFE4E00BED34F /* TransferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAA41A3BFF5C00BED34F /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
+		0C9FCAA81A3C011200BED34F /* BayarListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BayarListTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayarListTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAAB1A3C013600BED34F /* SharedBayarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedBayarDetailViewController.h; sourceTree = "<group>"; };
+		0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedBayarDetailViewController.m; sourceTree = "<group>"; };
+		0C9FCAAE1A3C046500BED34F /* BeliListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeliListTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeliListTableViewController.m; sourceTree = "<group>"; };
+		0C9FCAB11A3C049E00BED34F /* SharedBeliViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedBeliViewController.h; sourceTree = "<group>"; };
+		0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedBeliViewController.m; sourceTree = "<group>"; };
+		0C9FCAB41A3C08C100BED34F /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		0CAAD2DD1A320AD100DE3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0CAAD2E51A320ED100DE3B5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0CAAD2E81A32120300DE3B5B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -51,6 +191,17 @@
 		0CAAD2F61A32217100DE3B5B /* BarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarHelper.m; sourceTree = "<group>"; };
 		0CAAD2F81A32218200DE3B5B /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
 		0CAAD2F91A32218200DE3B5B /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
+		0CAAD2FE1A32230300DE3B5B /* globalVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalVariable.h; sourceTree = "<group>"; };
+		0CAAD2FF1A32230300DE3B5B /* globalVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = globalVariable.m; sourceTree = "<group>"; };
+		0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimaAPIManager.h; sourceTree = "<group>"; };
+		0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = delimaAPIManager.m; sourceTree = "<group>"; };
+		0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0CAAD3151A32856A00DE3B5B /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
+		0CAAD3161A32856A00DE3B5B /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		0CDC13BD1A3430380074B6CF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0CDC13BE1A3430380074B6CF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
+		0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		9301EBAF5A5D5CB69BB60A59 /* Pods-Delima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.release.xcconfig"; sourceTree = "<group>"; };
 		C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delima.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +225,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1B88571A406D4D00266057 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B88581A406D6200266057 /* Config.h */,
+				0C1B88591A406D6200266057 /* Config.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		0C1B885B1A4070C100266057 /* Fee */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B885C1A40711A00266057 /* Fee.h */,
+				0C1B885D1A40711A00266057 /* Fee.m */,
+			);
+			name = Fee;
+			sourceTree = "<group>";
+		};
+		0C2905011A333E9700227B1E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0C2905021A333EB200227B1E /* User.h */,
+				0C2905031A333EB200227B1E /* User.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		0C2905051A333F6400227B1E /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0C2905061A333F7400227B1E /* Favorite.h */,
+				0C2905071A333F7400227B1E /* Favorite.m */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		0C29051A1A33452E00227B1E /* Static Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C96A6B21A41A05B0092B5E2 /* game */,
+				0C96A68B1A419D510092B5E2 /* bank.plist */,
+				0C96A68C1A419D510092B5E2 /* Voucher Game.plist */,
+				0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */,
+				0C96A68E1A419D510092B5E2 /* Seluler Pasca Bayar.plist */,
+				0C96A68F1A419D510092B5E2 /* TV Berbayar.plist */,
+				0C96A6901A419D510092B5E2 /* PDAM.plist */,
+				0C96A6911A419D510092B5E2 /* seluler */,
+				0C96A69E1A419D510092B5E2 /* Telkom Group.plist */,
+			);
+			name = "Static Data";
+			sourceTree = "<group>";
+		};
 		0C3055E31A31F3F600F4D4B2 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +301,13 @@
 		0C3055EE1A31F3F600F4D4B2 /* Delima */ = {
 			isa = PBXGroup;
 			children = (
+				0CFE87421A337DA400C6D1CB /* View */,
+				0CAAD3091A3231DF00DE3B5B /* Resource */,
+				0CAAD3061A32287600DE3B5B /* Model */,
+				0CAAD2FB1A3221B700DE3B5B /* Manager */,
 				0CAAD2E11A320B3A00DE3B5B /* Helper */,
 				0CAAD2DF1A320B2600DE3B5B /* View Controller */,
 				0CAAD2DA1A32086500DE3B5B /* Storyboard */,
-				0CAAD2D91A31FC1A00DE3B5B /* Model */,
-				0CAAD2D81A31FC1500DE3B5B /* Helper */,
 				0CAAD2D71A31FC0B00DE3B5B /* Navigation Controller */,
 				0CAAD2D61A31FC0400DE3B5B /* Controller */,
 				0C3055F31A31F3F600F4D4B2 /* AppDelegate.h */,
@@ -118,6 +323,7 @@
 			children = (
 				0C3055F01A31F3F600F4D4B2 /* Info.plist */,
 				0C3055F11A31F3F600F4D4B2 /* main.m */,
+				0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,6 +345,144 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C74254B1A47BE6300DDAE72 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Invoice;
+			sourceTree = "<group>";
+		};
+		0C74254E1A47EF0C00DDAE72 /* Pengaturan */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425641A48374200DDAE72 /* Ganti Pin */,
+				0C74255A1A48037A00DDAE72 /* Pengaturan Fee */,
+				0C74254F1A47EF2800DDAE72 /* PengaturanTableViewController.h */,
+				0C7425501A47EF2800DDAE72 /* PengaturanTableViewController.m */,
+			);
+			name = Pengaturan;
+			sourceTree = "<group>";
+		};
+		0C74255A1A48037A00DDAE72 /* Pengaturan Fee */ = {
+			isa = PBXGroup;
+			children = (
+				0C74255B1A4803C700DDAE72 /* FeeTableViewController.h */,
+				0C74255C1A4803C700DDAE72 /* FeeTableViewController.m */,
+				0C7425611A48197400DDAE72 /* FeeDetailViewController.h */,
+				0C7425621A48197400DDAE72 /* FeeDetailViewController.m */,
+			);
+			name = "Pengaturan Fee";
+			sourceTree = "<group>";
+		};
+		0C7425641A48374200DDAE72 /* Ganti Pin */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425651A48376200DDAE72 /* GantiPinViewController.h */,
+				0C7425661A48376200DDAE72 /* GantiPinViewController.m */,
+			);
+			name = "Ganti Pin";
+			sourceTree = "<group>";
+		};
+		0C7425681A48395600DDAE72 /* Aktifasi Akun */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425691A48396700DDAE72 /* AktivasiAkunViewController.h */,
+				0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */,
+			);
+			name = "Aktifasi Akun";
+			sourceTree = "<group>";
+		};
+		0C96A6911A419D510092B5E2 /* seluler */ = {
+			isa = PBXGroup;
+			children = (
+				0C96A6921A419D510092B5E2 /* 777010.plist */,
+				0C96A6931A419D510092B5E2 /* 777019.plist */,
+				0C96A6941A419D510092B5E2 /* 777020.plist */,
+				0C96A6951A419D510092B5E2 /* 777030.plist */,
+				0C96A6961A419D510092B5E2 /* 777040.plist */,
+				0C96A6971A419D510092B5E2 /* 777050.plist */,
+				0C96A6981A419D510092B5E2 /* 777060.plist */,
+				0C96A6991A419D510092B5E2 /* 777080.plist */,
+				0C96A69A1A419D510092B5E2 /* 777090.plist */,
+				0C96A69B1A419D510092B5E2 /* 777091.plist */,
+				0C96A69C1A419D510092B5E2 /* 777092.plist */,
+				0C96A69D1A419D510092B5E2 /* 777093.plist */,
+			);
+			path = seluler;
+			sourceTree = "<group>";
+		};
+		0C96A6B21A41A05B0092B5E2 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				0C96A6B31A41A0650092B5E2 /* 778063.plist */,
+				0C96A6B41A41A0650092B5E2 /* 778064.plist */,
+				0C96A6B51A41A0650092B5E2 /* 778065.plist */,
+				0C96A6B61A41A0650092B5E2 /* 778066.plist */,
+				0C96A6B71A41A0650092B5E2 /* 778067.plist */,
+				0C96A6B81A41A0650092B5E2 /* 778068.plist */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		0C9FCA8B1A3B43B700BED34F /* Cash In */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FCA9B1A3BFCD800BED34F /* CashInViewController.h */,
+				0C9FCA9C1A3BFCD800BED34F /* CashInViewController.m */,
+			);
+			name = "Cash In";
+			sourceTree = "<group>";
+		};
+		0C9FCA8C1A3B44CB00BED34F /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FCA9E1A3BFE2800BED34F /* TransferViewController.h */,
+				0C9FCA9F1A3BFE2800BED34F /* TransferViewController.m */,
+				0C9FCAA11A3BFE4E00BED34F /* TransferTableViewController.h */,
+				0C9FCAA21A3BFE4E00BED34F /* TransferTableViewController.m */,
+			);
+			name = Transfer;
+			sourceTree = "<group>";
+		};
+		0C9FCA8D1A3B44D700BED34F /* Beli */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FCAAE1A3C046500BED34F /* BeliListTableViewController.h */,
+				0C9FCAAF1A3C046500BED34F /* BeliListTableViewController.m */,
+				0C9FCAB11A3C049E00BED34F /* SharedBeliViewController.h */,
+				0C9FCAB21A3C049E00BED34F /* SharedBeliViewController.m */,
+			);
+			name = Beli;
+			sourceTree = "<group>";
+		};
+		0C9FCA8E1A3B44DF00BED34F /* Bayar */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FCAA81A3C011200BED34F /* BayarListTableViewController.h */,
+				0C9FCAA91A3C011200BED34F /* BayarListTableViewController.m */,
+				0C9FCAAB1A3C013600BED34F /* SharedBayarDetailViewController.h */,
+				0C9FCAAC1A3C013600BED34F /* SharedBayarDetailViewController.m */,
+			);
+			name = Bayar;
+			sourceTree = "<group>";
+		};
+		0C9FCA8F1A3B44E300BED34F /* History Online */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FCAB41A3C08C100BED34F /* HistoryTableViewController.h */,
+				0C9FCAB51A3C08C100BED34F /* HistoryTableViewController.m */,
+			);
+			name = "History Online";
+			sourceTree = "<group>";
+		};
+		0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */ = {
+			isa = PBXGroup;
+			children = (
+				0C74254E1A47EF0C00DDAE72 /* Pengaturan */,
+			);
+			name = "Profile dan Pengaturan";
+			sourceTree = "<group>";
+		};
 		0CAAD2D61A31FC0400DE3B5B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,24 +497,18 @@
 			name = "Navigation Controller";
 			sourceTree = "<group>";
 		};
-		0CAAD2D81A31FC1500DE3B5B /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helper;
-			sourceTree = "<group>";
-		};
-		0CAAD2D91A31FC1A00DE3B5B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		0CAAD2DA1A32086500DE3B5B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				0CAAD2E51A320ED100DE3B5B /* Main.storyboard */,
+				0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */,
+				0C9FCA921A3B496000BED34F /* Cashin.storyboard */,
+				0C9FCA941A3B496F00BED34F /* Beli.storyboard */,
+				0C9FCA961A3B497A00BED34F /* Bayar.storyboard */,
+				0C9FCA991A3BFA2E00BED34F /* Transfer.storyboard */,
+				0C9FCAA41A3BFF5C00BED34F /* History.storyboard */,
+				0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */,
+				0C7425521A47F09D00DDAE72 /* Fee.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -178,6 +516,15 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C7425681A48395600DDAE72 /* Aktifasi Akun */,
+				0C74254B1A47BE6300DDAE72 /* Invoice */,
+				0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */,
+				0C9FCA8F1A3B44E300BED34F /* History Online */,
+				0C9FCA8E1A3B44DF00BED34F /* Bayar */,
+				0C9FCA8D1A3B44D700BED34F /* Beli */,
+				0C9FCA8C1A3B44CB00BED34F /* Transfer */,
+				0C9FCA8B1A3B43B700BED34F /* Cash In */,
+				0CDC13BC1A3430210074B6CF /* Login */,
 				0CAAD2E71A3211EA00DE3B5B /* Left Menu */,
 				0CAAD2E01A320B3000DE3B5B /* Home */,
 			);
@@ -196,10 +543,15 @@
 		0CAAD2E11A320B3A00DE3B5B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD2FD1A3222BB00DE3B5B /* Static */,
 				0CAAD2F51A32217100DE3B5B /* BarHelper.h */,
 				0CAAD2F61A32217100DE3B5B /* BarHelper.m */,
 				0CAAD2F81A32218200DE3B5B /* ColorHelper.h */,
 				0CAAD2F91A32218200DE3B5B /* ColorHelper.m */,
+				0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */,
+				0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */,
+				0C1B88631A40746C00266057 /* PropertyHelper.h */,
+				0C1B88641A40746C00266057 /* PropertyHelper.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -207,10 +559,115 @@
 		0CAAD2E71A3211EA00DE3B5B /* Left Menu */ = {
 			isa = PBXGroup;
 			children = (
+				0CAAD3081A322F4700DE3B5B /* Cell Subclass */,
 				0CAAD2E81A32120300DE3B5B /* LeftViewController.h */,
 				0CAAD2E91A32120300DE3B5B /* LeftViewController.m */,
 			);
 			name = "Left Menu";
+			sourceTree = "<group>";
+		};
+		0CAAD2FB1A3221B700DE3B5B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD3071A32288700DE3B5B /* Realm Manager */,
+				0CAAD2FC1A32227200DE3B5B /* API Manager */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		0CAAD2FC1A32227200DE3B5B /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425401A471EEE00DDAE72 /* API+BeliManager.h */,
+				0C7425411A471EEE00DDAE72 /* API+BeliManager.m */,
+				0CAAD3011A32235F00DE3B5B /* delimaAPIManager.h */,
+				0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */,
+				0C6D9FB91A38726900DC9E2D /* API+LoginManager.h */,
+				0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */,
+				0C96A6C21A41BDBE0092B5E2 /* API+TransferBankManager.h */,
+				0C96A6C31A41BDBE0092B5E2 /* API+TransferBankManager.m */,
+			);
+			name = "API Manager";
+			sourceTree = "<group>";
+		};
+		0CAAD2FD1A3222BB00DE3B5B /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD2FE1A32230300DE3B5B /* globalVariable.h */,
+				0CAAD2FF1A32230300DE3B5B /* globalVariable.m */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
+		0CAAD3061A32287600DE3B5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B885B1A4070C100266057 /* Fee */,
+				0C1B88571A406D4D00266057 /* Config */,
+				0C2905051A333F6400227B1E /* Favorite */,
+				0C2905011A333E9700227B1E /* User */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0CAAD3071A32288700DE3B5B /* Realm Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0C2904FE1A332BE200227B1E /* RealmManager.h */,
+				0C2904FF1A332BE200227B1E /* RealmManager.m */,
+			);
+			name = "Realm Manager";
+			sourceTree = "<group>";
+		};
+		0CAAD3081A322F4700DE3B5B /* Cell Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				0CAAD3151A32856A00DE3B5B /* MenuCell.h */,
+				0CAAD3161A32856A00DE3B5B /* MenuCell.m */,
+			);
+			name = "Cell Subclass";
+			sourceTree = "<group>";
+		};
+		0CAAD3091A3231DF00DE3B5B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0C29051A1A33452E00227B1E /* Static Data */,
+				0CAAD30A1A3231E700DE3B5B /* Font */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		0CAAD30A1A3231E700DE3B5B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		0CDC13BC1A3430210074B6CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0CDC13BD1A3430380074B6CF /* LoginViewController.h */,
+				0CDC13BE1A3430380074B6CF /* LoginViewController.m */,
+				0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */,
+				0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0CFE87421A337DA400C6D1CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CFE87431A337DAC00C6D1CB /* Top View */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0CFE87431A337DAC00C6D1CB /* Top View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Top View";
 			sourceTree = "<group>";
 		};
 		12DC53652AC0E4C707F27A48 /* Frameworks */ = {
@@ -312,9 +769,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C96A6AF1A419D510092B5E2 /* 777092.plist in Resources */,
+				0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */,
+				0C9FCA931A3B496000BED34F /* Cashin.storyboard in Resources */,
 				0CAAD2E61A320ED100DE3B5B /* Main.storyboard in Resources */,
+				0C96A6A71A419D510092B5E2 /* 777020.plist in Resources */,
+				0C96A6B91A41A0650092B5E2 /* 778063.plist in Resources */,
+				0C96A6AD1A419D510092B5E2 /* 777090.plist in Resources */,
+				0C96A6BB1A41A0650092B5E2 /* 778065.plist in Resources */,
+				0C96A6A31A419D510092B5E2 /* TV Berbayar.plist in Resources */,
+				0C96A6B01A419D510092B5E2 /* 777093.plist in Resources */,
+				0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */,
+				0C96A6A81A419D510092B5E2 /* 777030.plist in Resources */,
+				0C96A6A61A419D510092B5E2 /* 777019.plist in Resources */,
+				0C96A6AA1A419D510092B5E2 /* 777050.plist in Resources */,
+				0C96A6A51A419D510092B5E2 /* 777010.plist in Resources */,
+				0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */,
+				0C96A6A41A419D510092B5E2 /* PDAM.plist in Resources */,
+				0C96A6A91A419D510092B5E2 /* 777040.plist in Resources */,
+				0C9FCA951A3B496F00BED34F /* Beli.storyboard in Resources */,
+				0C96A69F1A419D510092B5E2 /* bank.plist in Resources */,
+				0C96A6A21A419D510092B5E2 /* Seluler Pasca Bayar.plist in Resources */,
+				0C9FCAA51A3BFF5C00BED34F /* History.storyboard in Resources */,
+				0C96A6BA1A41A0650092B5E2 /* 778064.plist in Resources */,
+				0C96A6AB1A419D510092B5E2 /* 777060.plist in Resources */,
 				0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */,
+				0C96A6BE1A41A0650092B5E2 /* 778068.plist in Resources */,
+				0C96A6AC1A419D510092B5E2 /* 777080.plist in Resources */,
+				0C9FCA9A1A3BFA2F00BED34F /* Transfer.storyboard in Resources */,
+				0C96A6B11A419D510092B5E2 /* Telkom Group.plist in Resources */,
+				0C7425531A47F09D00DDAE72 /* Fee.storyboard in Resources */,
+				0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */,
+				0C96A6BC1A41A0650092B5E2 /* 778066.plist in Resources */,
+				0C9FCA971A3B497A00BED34F /* Bayar.storyboard in Resources */,
 				0CAAD2DE1A320AD100DE3B5B /* Default-568h@2x.png in Resources */,
+				0C96A6AE1A419D510092B5E2 /* 777091.plist in Resources */,
+				0C96A6BD1A41A0650092B5E2 /* 778067.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,12 +855,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1B885E1A40711A00266057 /* Fee.m in Sources */,
+				0C9FCAB61A3C08C100BED34F /* HistoryTableViewController.m in Sources */,
+				0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */,
+				0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */,
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
+				0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */,
+				0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */,
 				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
+				0C1B885A1A406D6200266057 /* Config.m in Sources */,
+				0C9FCAAA1A3C011200BED34F /* BayarListTableViewController.m in Sources */,
+				0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */,
+				0C9FCAA31A3BFE4E00BED34F /* TransferTableViewController.m in Sources */,
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
+				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,
+				0C2905001A332BE200227B1E /* RealmManager.m in Sources */,
+				0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */,
+				0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */,
+				0C9FCAB31A3C049E00BED34F /* SharedBeliViewController.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
+				0C96A6C41A41BDBE0092B5E2 /* API+TransferBankManager.m in Sources */,
+				0C2905041A333EB200227B1E /* User.m in Sources */,
+				0C74255D1A4803C700DDAE72 /* FeeTableViewController.m in Sources */,
+				0C1B88651A40746C00266057 /* PropertyHelper.m in Sources */,
+				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
+				0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */,
+				0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */,
+				0C7425511A47EF2800DDAE72 /* PengaturanTableViewController.m in Sources */,
+				0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
+				0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */,
+				0C2905081A333F7400227B1E /* Favorite.m in Sources */,
+				0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
+				0C9FCAA01A3BFE2800BED34F /* TransferViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +993,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = Delima/PrefixHeader.pch;
 				INFOPLIST_FILE = Delima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -489,6 +1010,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = Delima/PrefixHeader.pch;
 				INFOPLIST_FILE = Delima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
