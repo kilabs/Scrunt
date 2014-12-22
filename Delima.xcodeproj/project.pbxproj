@@ -27,6 +27,7 @@
 		0C74255D1A4803C700DDAE72 /* FeeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74255C1A4803C700DDAE72 /* FeeTableViewController.m */; };
 		0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425621A48197400DDAE72 /* FeeDetailViewController.m */; };
 		0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425661A48376200DDAE72 /* GantiPinViewController.m */; };
+		0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */; };
 		0C96A69F1A419D510092B5E2 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68B1A419D510092B5E2 /* bank.plist */; };
 		0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68C1A419D510092B5E2 /* Voucher Game.plist */; };
 		0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */; };
@@ -131,6 +132,8 @@
 		0C7425621A48197400DDAE72 /* FeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeDetailViewController.m; sourceTree = "<group>"; };
 		0C7425651A48376200DDAE72 /* GantiPinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GantiPinViewController.h; sourceTree = "<group>"; };
 		0C7425661A48376200DDAE72 /* GantiPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GantiPinViewController.m; sourceTree = "<group>"; };
+		0C7425691A48396700DDAE72 /* AktivasiAkunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AktivasiAkunViewController.h; sourceTree = "<group>"; };
+		0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AktivasiAkunViewController.m; sourceTree = "<group>"; };
 		0C96A68B1A419D510092B5E2 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		0C96A68C1A419D510092B5E2 /* Voucher Game.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voucher Game.plist"; sourceTree = "<group>"; };
 		0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TopUp Pulsa.plist"; sourceTree = "<group>"; };
@@ -380,6 +383,15 @@
 			name = "Ganti Pin";
 			sourceTree = "<group>";
 		};
+		0C7425681A48395600DDAE72 /* Aktifasi Akun */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425691A48396700DDAE72 /* AktivasiAkunViewController.h */,
+				0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */,
+			);
+			name = "Aktifasi Akun";
+			sourceTree = "<group>";
+		};
 		0C96A6911A419D510092B5E2 /* seluler */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,6 +516,7 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C7425681A48395600DDAE72 /* Aktifasi Akun */,
 				0C74254B1A47BE6300DDAE72 /* Invoice */,
 				0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */,
 				0C9FCA8F1A3B44E300BED34F /* History Online */,
@@ -847,6 +860,7 @@
 				0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */,
 				0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */,
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
+				0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */,
 				0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */,
 				0CAAD2FA1A32218200DE3B5B /* ColorHelper.m in Sources */,
 				0C1B885A1A406D6200266057 /* Config.m in Sources */,
