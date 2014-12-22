@@ -28,6 +28,11 @@
 		0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425621A48197400DDAE72 /* FeeDetailViewController.m */; };
 		0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425661A48376200DDAE72 /* GantiPinViewController.m */; };
 		0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */; };
+		0C74256E1A48514A00DDAE72 /* InvoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74256D1A48514A00DDAE72 /* InvoiceViewController.m */; };
+		0C7425701A48515F00DDAE72 /* Invoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C74256F1A48515F00DDAE72 /* Invoice.storyboard */; };
+		0C7425731A48623800DDAE72 /* API+BayarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425721A48623800DDAE72 /* API+BayarManager.m */; };
+		0C7425751A48708100DDAE72 /* Inquiry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7425741A48708000DDAE72 /* Inquiry.storyboard */; };
+		0C7425791A4875E500DDAE72 /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425781A4875E500DDAE72 /* InquiryViewController.m */; };
 		0C96A69F1A419D510092B5E2 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68B1A419D510092B5E2 /* bank.plist */; };
 		0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68C1A419D510092B5E2 /* Voucher Game.plist */; };
 		0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */; };
@@ -134,6 +139,14 @@
 		0C7425661A48376200DDAE72 /* GantiPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GantiPinViewController.m; sourceTree = "<group>"; };
 		0C7425691A48396700DDAE72 /* AktivasiAkunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AktivasiAkunViewController.h; sourceTree = "<group>"; };
 		0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AktivasiAkunViewController.m; sourceTree = "<group>"; };
+		0C74256C1A48514A00DDAE72 /* InvoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceViewController.h; sourceTree = "<group>"; };
+		0C74256D1A48514A00DDAE72 /* InvoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceViewController.m; sourceTree = "<group>"; };
+		0C74256F1A48515F00DDAE72 /* Invoice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invoice.storyboard; sourceTree = "<group>"; };
+		0C7425711A48623800DDAE72 /* API+BayarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+BayarManager.h"; sourceTree = "<group>"; };
+		0C7425721A48623800DDAE72 /* API+BayarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+BayarManager.m"; sourceTree = "<group>"; };
+		0C7425741A48708000DDAE72 /* Inquiry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inquiry.storyboard; sourceTree = "<group>"; };
+		0C7425771A4875E500DDAE72 /* InquiryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryViewController.h; sourceTree = "<group>"; };
+		0C7425781A4875E500DDAE72 /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
 		0C96A68B1A419D510092B5E2 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		0C96A68C1A419D510092B5E2 /* Voucher Game.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voucher Game.plist"; sourceTree = "<group>"; };
 		0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TopUp Pulsa.plist"; sourceTree = "<group>"; };
@@ -308,8 +321,6 @@
 				0CAAD2E11A320B3A00DE3B5B /* Helper */,
 				0CAAD2DF1A320B2600DE3B5B /* View Controller */,
 				0CAAD2DA1A32086500DE3B5B /* Storyboard */,
-				0CAAD2D71A31FC0B00DE3B5B /* Navigation Controller */,
-				0CAAD2D61A31FC0400DE3B5B /* Controller */,
 				0C3055F31A31F3F600F4D4B2 /* AppDelegate.h */,
 				0C3055F41A31F3F600F4D4B2 /* AppDelegate.m */,
 				0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */,
@@ -348,6 +359,8 @@
 		0C74254B1A47BE6300DDAE72 /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				0C74256C1A48514A00DDAE72 /* InvoiceViewController.h */,
+				0C74256D1A48514A00DDAE72 /* InvoiceViewController.m */,
 			);
 			name = Invoice;
 			sourceTree = "<group>";
@@ -390,6 +403,15 @@
 				0C74256A1A48396700DDAE72 /* AktivasiAkunViewController.m */,
 			);
 			name = "Aktifasi Akun";
+			sourceTree = "<group>";
+		};
+		0C7425761A4875CA00DDAE72 /* Inquiry */ = {
+			isa = PBXGroup;
+			children = (
+				0C7425771A4875E500DDAE72 /* InquiryViewController.h */,
+				0C7425781A4875E500DDAE72 /* InquiryViewController.m */,
+			);
+			name = Inquiry;
 			sourceTree = "<group>";
 		};
 		0C96A6911A419D510092B5E2 /* seluler */ = {
@@ -483,20 +505,6 @@
 			name = "Profile dan Pengaturan";
 			sourceTree = "<group>";
 		};
-		0CAAD2D61A31FC0400DE3B5B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		0CAAD2D71A31FC0B00DE3B5B /* Navigation Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Navigation Controller";
-			sourceTree = "<group>";
-		};
 		0CAAD2DA1A32086500DE3B5B /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +517,8 @@
 				0C9FCAA41A3BFF5C00BED34F /* History.storyboard */,
 				0C9FCAA61A3BFF6900BED34F /* Pengaturan.storyboard */,
 				0C7425521A47F09D00DDAE72 /* Fee.storyboard */,
+				0C74256F1A48515F00DDAE72 /* Invoice.storyboard */,
+				0C7425741A48708000DDAE72 /* Inquiry.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -516,6 +526,7 @@
 		0CAAD2DF1A320B2600DE3B5B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C7425761A4875CA00DDAE72 /* Inquiry */,
 				0C7425681A48395600DDAE72 /* Aktifasi Akun */,
 				0C74254B1A47BE6300DDAE72 /* Invoice */,
 				0C9FCA901A3B44F000BED34F /* Profile dan Pengaturan */,
@@ -586,6 +597,8 @@
 				0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */,
 				0C96A6C21A41BDBE0092B5E2 /* API+TransferBankManager.h */,
 				0C96A6C31A41BDBE0092B5E2 /* API+TransferBankManager.m */,
+				0C7425711A48623800DDAE72 /* API+BayarManager.h */,
+				0C7425721A48623800DDAE72 /* API+BayarManager.m */,
 			);
 			name = "API Manager";
 			sourceTree = "<group>";
@@ -777,11 +790,13 @@
 				0C96A6B91A41A0650092B5E2 /* 778063.plist in Resources */,
 				0C96A6AD1A419D510092B5E2 /* 777090.plist in Resources */,
 				0C96A6BB1A41A0650092B5E2 /* 778065.plist in Resources */,
+				0C7425751A48708100DDAE72 /* Inquiry.storyboard in Resources */,
 				0C96A6A31A419D510092B5E2 /* TV Berbayar.plist in Resources */,
 				0C96A6B01A419D510092B5E2 /* 777093.plist in Resources */,
 				0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */,
 				0C96A6A81A419D510092B5E2 /* 777030.plist in Resources */,
 				0C96A6A61A419D510092B5E2 /* 777019.plist in Resources */,
+				0C7425701A48515F00DDAE72 /* Invoice.storyboard in Resources */,
 				0C96A6AA1A419D510092B5E2 /* 777050.plist in Resources */,
 				0C96A6A51A419D510092B5E2 /* 777010.plist in Resources */,
 				0C9FCAA71A3BFF6900BED34F /* Pengaturan.storyboard in Resources */,
@@ -871,6 +886,7 @@
 				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,
 				0C2905001A332BE200227B1E /* RealmManager.m in Sources */,
 				0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */,
+				0C7425731A48623800DDAE72 /* API+BayarManager.m in Sources */,
 				0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */,
 				0C9FCAB31A3C049E00BED34F /* SharedBeliViewController.m in Sources */,
 				0C3055F51A31F3F600F4D4B2 /* AppDelegate.m in Sources */,
@@ -882,12 +898,14 @@
 				0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */,
 				0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */,
 				0C7425511A47EF2800DDAE72 /* PengaturanTableViewController.m in Sources */,
+				0C7425791A4875E500DDAE72 /* InquiryViewController.m in Sources */,
 				0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */,
 				0CAAD2F71A32217100DE3B5B /* BarHelper.m in Sources */,
 				0C9FCAB01A3C046500BED34F /* BeliListTableViewController.m in Sources */,
 				0C2905081A333F7400227B1E /* Favorite.m in Sources */,
 				0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */,
 				0C3055F21A31F3F600F4D4B2 /* main.m in Sources */,
+				0C74256E1A48514A00DDAE72 /* InvoiceViewController.m in Sources */,
 				0C9FCAA01A3BFE2800BED34F /* TransferViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
