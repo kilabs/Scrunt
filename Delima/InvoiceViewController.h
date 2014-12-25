@@ -19,4 +19,6 @@
 @property (strong, nonatomic) NSString *hargaText;
 @property (strong, nonatomic) NSString *feeText;
 @property (strong, nonatomic) NSString *totalText;
+@property (strong, nonatomic) NSString *namaPelanggan;
+@property (nonatomic) BOOL isBayar;
 @end

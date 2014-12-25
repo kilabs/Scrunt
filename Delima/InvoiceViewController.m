@@ -8,6 +8,7 @@
 
 #import "InvoiceViewController.h"
 #import "DelimaCommonFunction.h"
+#import "TransactionHistory.h"
 @interface InvoiceViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *namaMitra;
 @property (strong, nonatomic) IBOutlet UILabel *trxDate;
@@ -37,12 +38,32 @@
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSNumber * myNumber = [f numberFromString:_hargaText];
+    if ([_feeText isEqualToString:@""]) {
+        _feeText=@"0";
+    };
     NSNumber * myNumbers = [f numberFromString:_feeText];
     _dataHarga.text =[NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:myNumber]];
+    
     _feeNominal.text = [NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:myNumbers]];
     int data = [_hargaText integerValue]+[_feeText integerValue];
     
     _totalHarga.text =[NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:[NSNumber numberWithInt:data]]];
+    
+    NSLog(@"data-->%@",_itemString);
+    NSLog(@"data-->%@",_trxDate.text);
+    NSLog(@"data-->%@",_dataHarga.text);
+    NSLog(@"data-->%@",_noTujuan.text);
+    NSLog(@"data-->%@",_namaPelanggan);
+    NSLog(@"Pembaayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text);
+    TransactionHistory *t = [[TransactionHistory alloc]init];
+    t.executeDate =[NSDate date];
+    t.tujuan = _noTujuan.text;
+    t.itemName = _item.text;
+    t.price =_dataHarga.text;
+    t.keterangan =[NSString stringWithFormat:@"Pembaayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
+    [TransactionHistory save:t withRevision:YES];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -51,7 +72,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)closeWindow:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [[[self presentingViewController] presentingViewController]  dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)saveToImage:(id)sender {
     UIImage* image = nil;
@@ -78,13 +99,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

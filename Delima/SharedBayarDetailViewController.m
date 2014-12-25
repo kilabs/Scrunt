@@ -97,6 +97,7 @@
                 purchaseContr.namaMitraString = _vendorText.text;
                 purchaseContr.noPelanggannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"billNumber"];
                 purchaseContr.namaPelanggannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"recipientName"];
+                purchaseContr.jumlahBulannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"jmlbill"];
                 int postData;
                 postData = [[[posts objectAtIndex:0]objectForKey:@"feeAdm"]integerValue]+[[[posts objectAtIndex:0]objectForKey:@"feeAmount"]integerValue];
                 purchaseContr.noTujuannamaMitraString = [NSString stringWithFormat:@"%d",postData];
@@ -106,6 +107,7 @@
                 [self presentViewController:nav animated:YES completion:nil];
             }
             else{
+                NSLog(@"error->%@",error);
                 [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
             }
         }

@@ -18,6 +18,7 @@
 		0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3055F71A31F3F600F4D4B2 /* ViewController.m */; };
 		0C3055FD1A31F3F600F4D4B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3055FC1A31F3F600F4D4B2 /* Images.xcassets */; };
 		0C30560C1A31F3F600F4D4B2 /* DelimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */; };
+		0C3C6C861A4C69D10015147A /* API+CheckSaldo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C6C851A4C69D10015147A /* API+CheckSaldo.m */; };
 		0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */; };
 		0C6D9FB81A386FEF00DC9E2D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */; };
 		0C6D9FBB1A38726900DC9E2D /* API+LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D9FBA1A38726900DC9E2D /* API+LoginManager.m */; };
@@ -83,6 +84,7 @@
 		0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3161A32856A00DE3B5B /* MenuCell.m */; };
 		0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13BE1A3430380074B6CF /* LoginViewController.m */; };
 		0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */; };
+		0CEC8EFE1A49A52900F86BCB /* TransactionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8EFD1A49A52900F86BCB /* TransactionHistory.m */; };
 		23F0F348DE0464F21073F790 /* libPods-Delima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		0C3056051A31F3F600F4D4B2 /* DelimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C30560A1A31F3F600F4D4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C30560B1A31F3F600F4D4B2 /* DelimaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelimaTests.m; sourceTree = "<group>"; };
+		0C3C6C841A4C69D10015147A /* API+CheckSaldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+CheckSaldo.h"; sourceTree = "<group>"; };
+		0C3C6C851A4C69D10015147A /* API+CheckSaldo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+CheckSaldo.m"; sourceTree = "<group>"; };
 		0C66B2361A3868360006CBAB /* DelimaCommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimaCommonFunction.h; sourceTree = "<group>"; };
 		0C66B2371A3868360006CBAB /* DelimaCommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimaCommonFunction.m; sourceTree = "<group>"; };
 		0C6D9FB71A386FEF00DC9E2D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		0CDC13BE1A3430380074B6CF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
 		0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
+		0CEC8EFC1A49A52900F86BCB /* TransactionHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionHistory.h; sourceTree = "<group>"; };
+		0CEC8EFD1A49A52900F86BCB /* TransactionHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionHistory.m; sourceTree = "<group>"; };
 		9301EBAF5A5D5CB69BB60A59 /* Pods-Delima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delima/Pods-Delima.release.xcconfig"; sourceTree = "<group>"; };
 		C33F5048AF3CDEF2614FF158 /* libPods-Delima.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delima.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -314,7 +320,6 @@
 		0C3055EE1A31F3F600F4D4B2 /* Delima */ = {
 			isa = PBXGroup;
 			children = (
-				0CFE87421A337DA400C6D1CB /* View */,
 				0CAAD3091A3231DF00DE3B5B /* Resource */,
 				0CAAD3061A32287600DE3B5B /* Model */,
 				0CAAD2FB1A3221B700DE3B5B /* Manager */,
@@ -599,6 +604,8 @@
 				0C96A6C31A41BDBE0092B5E2 /* API+TransferBankManager.m */,
 				0C7425711A48623800DDAE72 /* API+BayarManager.h */,
 				0C7425721A48623800DDAE72 /* API+BayarManager.m */,
+				0C3C6C841A4C69D10015147A /* API+CheckSaldo.h */,
+				0C3C6C851A4C69D10015147A /* API+CheckSaldo.m */,
 			);
 			name = "API Manager";
 			sourceTree = "<group>";
@@ -615,6 +622,7 @@
 		0CAAD3061A32287600DE3B5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CEC8EFB1A49A51300F86BCB /* History */,
 				0C1B885B1A4070C100266057 /* Fee */,
 				0C1B88571A406D4D00266057 /* Config */,
 				0C2905051A333F6400227B1E /* Favorite */,
@@ -668,19 +676,13 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		0CFE87421A337DA400C6D1CB /* View */ = {
+		0CEC8EFB1A49A51300F86BCB /* History */ = {
 			isa = PBXGroup;
 			children = (
-				0CFE87431A337DAC00C6D1CB /* Top View */,
+				0CEC8EFC1A49A52900F86BCB /* TransactionHistory.h */,
+				0CEC8EFD1A49A52900F86BCB /* TransactionHistory.m */,
 			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		0CFE87431A337DAC00C6D1CB /* Top View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Top View";
+			name = History;
 			sourceTree = "<group>";
 		};
 		12DC53652AC0E4C707F27A48 /* Frameworks */ = {
@@ -874,6 +876,7 @@
 				0C9FCAB61A3C08C100BED34F /* HistoryTableViewController.m in Sources */,
 				0C9FCAAD1A3C013600BED34F /* SharedBayarDetailViewController.m in Sources */,
 				0C7425671A48376200DDAE72 /* GantiPinViewController.m in Sources */,
+				0C3C6C861A4C69D10015147A /* API+CheckSaldo.m in Sources */,
 				0C3055F81A31F3F600F4D4B2 /* ViewController.m in Sources */,
 				0C74256B1A48396700DDAE72 /* AktivasiAkunViewController.m in Sources */,
 				0C9FCA9D1A3BFCD800BED34F /* CashInViewController.m in Sources */,
@@ -881,6 +884,7 @@
 				0C1B885A1A406D6200266057 /* Config.m in Sources */,
 				0C9FCAAA1A3C011200BED34F /* BayarListTableViewController.m in Sources */,
 				0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */,
+				0CEC8EFE1A49A52900F86BCB /* TransactionHistory.m in Sources */,
 				0C9FCAA31A3BFE4E00BED34F /* TransferTableViewController.m in Sources */,
 				0CAAD2EA1A32120300DE3B5B /* LeftViewController.m in Sources */,
 				0C66B2381A3868360006CBAB /* DelimaCommonFunction.m in Sources */,

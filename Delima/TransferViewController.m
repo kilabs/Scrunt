@@ -90,6 +90,8 @@
     [textField resignFirstResponder];
     return YES;
 }
+- (IBAction)openContact:(id)sender {
+}
 /*
  #pragma mark - Navigation
  

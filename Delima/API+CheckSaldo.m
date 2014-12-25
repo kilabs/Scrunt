@@ -1,21 +1,21 @@
 //
-//  API+BayarManager.m
+//  API+CheckSaldo.m
 //  Delima
 //
-//  Created by Arie Prasetyo on 12/22/14.
+//  Created by Arie Prasetyo on 12/25/14.
 //  Copyright (c) 2014 netra. All rights reserved.
 //
 
-#import "API+BayarManager.h"
-#import "globalVariable.h"
-#import "DelimaCommonFunction.h"
+#import "API+CheckSaldo.h"
 #import "delimaAPIManager.h"
-@implementation API_BayarManager
-+ (NSURLSessionDataTask *)paid:(NSDictionary *)parameters p:(void (^)(NSArray *posts, NSError *error))block{
-    return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@billpaymentfc2.php",delimaAPIUrl] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+#import "DelimaCommonFunction.h"
+#import "globalVariable.h"
+@implementation API_CheckSaldo
++ (NSURLSessionDataTask *)checkSaldo:(NSDictionary *)parameters p:(void (^)(NSArray *posts, NSError *error))block{
+    return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@checksaldofc3.php",delimaAPIUrl] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *postsFromResponse = responseObject;
         NSMutableArray *mutablePosts = [[NSMutableArray alloc]init];
-        
+        NSLog(@"rsponse-->%@",responseObject);
         if ([[responseObject objectForKey:@"rc"]isEqualToString:@"00"]) {
             [mutablePosts addObject:postsFromResponse];
             //// save it into model

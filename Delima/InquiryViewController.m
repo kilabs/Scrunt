@@ -27,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *noTujuan;
 @property (strong, nonatomic) IBOutlet UILabel *harga;
 @property (strong, nonatomic) User *sharedUser;
+@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 @end
 
 @implementation InquiryViewController
@@ -41,8 +42,12 @@
     _noPelanggan.text = _noPelanggannamaMitraString;
     _namaPelanggan.text =_namaPelanggannamaMitraString;
     _jumlahBulan.text = _jumlahBulannamaMitraString;
-    _noTujuan.text = _noTujuannamaMitraString;
-    _harga.text = _harganamaMitraString;
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber * feeNumber = [f numberFromString:_noTujuannamaMitraString];
+    NSNumber * hargaNumber = [f numberFromString:_harganamaMitraString];
+    _noTujuan.text =[NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:feeNumber]];
+    _harga.text = [NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:hargaNumber]];;
     // Do any additional setup after loading the view.
 }
 - (IBAction)submitToServer:(id)sender {
@@ -71,11 +76,12 @@
                 UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
                 UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
                 InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
-                purchaseContr.feeText = _fee;
+                purchaseContr.feeText = _noTujuannamaMitraString;
                 purchaseContr.namaMitraString = _sharedUser.uname;
                 purchaseContr.noTujuanString = _noPelanggannamaMitraString;
 
                 purchaseContr.itemString = _prodName;
+                purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
                 purchaseContr.hargaText = _harganamaMitraString;
                 nav.viewControllers =@[purchaseContr];
                 [self presentViewController:nav animated:YES completion:nil];

@@ -221,6 +221,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,6 +244,7 @@
                         <outlet property="namaPelanggan" destination="NNa-dQ-A1i" id="eXb-dg-pRl"/>
                         <outlet property="noPelanggan" destination="nNU-Oy-1kR" id="0gC-LH-nJ9"/>
                         <outlet property="noTujuan" destination="Smj-C5-Zc9" id="6pW-kD-mfY"/>
+                        <outlet property="scroller" destination="ZlD-dT-LJs" id="CFf-5b-36b"/>
                         <outlet property="tanggal" destination="88q-Oa-cU2" id="iaH-Wv-LDo"/>
                     </connections>
                 </viewController>
