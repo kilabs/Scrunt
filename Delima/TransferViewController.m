@@ -13,15 +13,16 @@
 #import "API+TransferBankManager.h"
 #import <ActionSheetStringPicker.h>
 #import <JVFloatLabeledTextField.h>
-@interface TransferViewController ()<UITextFieldDelegate>
+@interface TransferViewController ()<UITextFieldDelegate,UIScrollViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 @property (nonatomic,strong)NSMutableArray *dataBank;
 @property (nonatomic,strong)NSMutableArray *dataBankCode;
-@property (strong, nonatomic) IBOutlet JVFloatLabeledTextField *bankCode;
-@property (strong, nonatomic) IBOutlet JVFloatLabeledTextField *phoneText;
-@property (strong, nonatomic) IBOutlet JVFloatLabeledTextField *nominal;
-@property (strong, nonatomic) IBOutlet JVFloatLabeledTextField *berita;
-@property (strong, nonatomic) IBOutlet JVFloatLabeledTextField *noRekening;
+@property (strong, nonatomic) IBOutlet UITextField *bankCode;
+@property (strong, nonatomic) IBOutlet UITextField *phoneText;
+@property (strong, nonatomic) IBOutlet UITextField *nominal;
+@property (strong, nonatomic) IBOutlet UITextField *berita;
+@property (strong, nonatomic) IBOutlet UITextField *noRekening;
 @property (nonatomic) NSInteger selectedIndex;
 @end
 
@@ -34,6 +35,16 @@
     _nominal.delegate = self;
     _berita.delegate = self;
     _noRekening.delegate = self;
+    
+    _bankCode.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    _phoneText.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    
+    _nominal.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    _berita.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    
+    _phoneText.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    _noRekening.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    
     _dataBank = [[NSMutableArray alloc]init];
     _dataBankCode = [[NSMutableArray alloc]init];
     NSArray *data=[PropertyHelper readFromKeys:@[@"data"] withPropertiesPath:@"bank"];
@@ -103,3 +114,4 @@
  */
 
 @end
+

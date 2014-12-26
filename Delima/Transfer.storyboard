@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="603" y="386"/>
         </scene>
-        <!--Transfer Antar Bank-->
+        <!--Bank-->
         <scene sceneID="3wc-P5-hoT">
             <objects>
                 <viewController id="vVz-2U-MmQ" customClass="TransferViewController" sceneMemberID="viewController">
@@ -136,17 +136,23 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Transfer Antar Bank" id="yOs-Qd-AUn"/>
+                    <navigationItem key="navigationItem" title="Bank" id="yOs-Qd-AUn"/>
                     <connections>
                         <outlet property="bankCode" destination="PnK-IX-HdD" id="QvY-58-RQx"/>
                         <outlet property="berita" destination="XiZ-s0-DJ5" id="PlG-5b-XHw"/>
                         <outlet property="noRekening" destination="yl5-EF-B8c" id="2Md-fG-2gr"/>
                         <outlet property="nominal" destination="6gE-to-xpO" id="y9c-fc-0dC"/>
                         <outlet property="phoneText" destination="y9F-Oh-QRp" id="lB4-Nu-7I3"/>
+                        <outlet property="scroller" destination="YoB-1E-dlr" id="Wz6-aA-Ave"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GW-Cm-y99" userLabel="First Responder" sceneMemberID="firstResponder"/>
