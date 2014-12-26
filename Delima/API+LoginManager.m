@@ -51,7 +51,7 @@
         NSDictionary *postsFromResponse = responseObject;
         NSMutableArray *mutablePosts = [[NSMutableArray alloc]init];
         if ([[responseObject objectForKey:@"rc"]isEqualToString:@"00"]) {
-            
+            NSLog(@"response->%@",responseObject);
             API_LoginManager *post = [[API_LoginManager alloc]initWithUserBasicAttribute:postsFromResponse];
             [mutablePosts addObject:post];
             

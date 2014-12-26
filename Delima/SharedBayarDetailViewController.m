@@ -9,8 +9,11 @@
 #import "SharedBayarDetailViewController.h"
 #import "PropertyHelper.h"
 #import "ColorHelper.h"
+#import <MBProgressHUD.h>
 #import "User.h"
+#import "API+BayarManager.h"
 #import "DelimaCommonFunction.h"
+#import "InquiryViewController.h"
 #import <ActionSheetStringPicker.h>
 @interface SharedBayarDetailViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *vendorText;
@@ -60,7 +63,55 @@
     
 }
 - (IBAction)sendToServer:(id)sender {
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _sharedUser = [User getUserProfile];
+    int randNum = rand() % (111111 - 999999) + 0000000;
+    NSDictionary *params = @{@"uname":_sharedUser.uname,
+                             @"amount":@"1",
+                             @"passwd":_sharedUser.passwd,
+                             @"mercode":_sharedUser.merchantCode,
+                             @"mernumber":[NSString stringWithFormat:@"+%@",_sharedUser.merNumber],
+                             @"terminal":_sharedUser.terminal,
+                             @"traxId":[NSString stringWithFormat:@"%d",randNum],
+                             @"prodcode":_prodKode,
+                             @"recipientNumber":_noPelanggan.text,
+                             @"billNumber":_noPelanggan.text,
+                             @"bit61":_noPelanggan.text,
+                             @"feeadmin":@"1",
+                             @"idx":@"1",
+                             @"ref":_sharedUser.ref
+                             };
+    [API_BayarManager paid:params p:^(NSArray *posts, NSError *error) {
+        if(!error){
+            if(posts.count !=0){
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                UIStoryboard *s = [UIStoryboard storyboardWithName:@"Inquiry" bundle:nil];
+                
+                UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
+                InquiryViewController *purchaseContr = (InquiryViewController *)[s instantiateViewControllerWithIdentifier:@"InquiryViewController"];
+                
+                purchaseContr.bit61 =[[posts objectAtIndex:0]objectForKey:@"bit61"];
+                purchaseContr.prodCode = _prodKode;
+                purchaseContr.prodName =_vendorText.text;
+                purchaseContr.fee =[[posts objectAtIndex:0]objectForKey:@"feeAdm"];
+                purchaseContr.namaMitraString = _vendorText.text;
+                purchaseContr.noPelanggannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"billNumber"];
+                purchaseContr.namaPelanggannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"recipientName"];
+                purchaseContr.jumlahBulannamaMitraString = [[posts objectAtIndex:0]objectForKey:@"jmlbill"];
+                int postData;
+                postData = [[[posts objectAtIndex:0]objectForKey:@"feeAdm"]integerValue]+[[[posts objectAtIndex:0]objectForKey:@"feeAmount"]integerValue];
+                purchaseContr.noTujuannamaMitraString = [NSString stringWithFormat:@"%d",postData];
+                int total = [[[posts objectAtIndex:0]objectForKey:@"amount"]integerValue];
+                purchaseContr.harganamaMitraString =[NSString stringWithFormat:@"%d",total];
+                nav.viewControllers =@[purchaseContr];
+                [self presentViewController:nav animated:YES completion:nil];
+            }
+            else{
+                NSLog(@"error->%@",error);
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            }
+        }
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

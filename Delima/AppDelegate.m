@@ -11,6 +11,7 @@
 #import "LeftViewController.h"
 #import "LoginViewController.h"
 #import <Realm.h>
+#import <RLMRealm.h>
 #import "PropertyHelper.h"
 #import "ColorHelper.h"
 #import "Config.h"
@@ -28,7 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   /// init the data
+    
     if([Config allObjects].count <=0){
         [Fee setCelullarFee];
     }

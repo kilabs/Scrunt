@@ -7,6 +7,7 @@
 //
 
 #import "SharedBeliViewController.h"
+#import "InvoiceViewController.h"
 #import "Fee.h"
 #import "User.h"
 #import "PropertyHelper.h"
@@ -31,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *hpTujuan;
 @property (strong, nonatomic) IBOutlet UIButton *buttonKirim;
 @property (strong, nonatomic) NSString *prodKode;
+@property (strong, nonatomic) NSString *hargaDasar;
 @property (strong, nonatomic) User *sharedUser;
 
 @end
@@ -112,6 +114,7 @@
                                            _denomTextfield.text = selectedValue;
                                            Fee *c = [_listDenom objectAtIndex:selectedIndex];
                                            _hargaJual.text =[NSString stringWithFormat:@"%ld",(long)c.salePrice];
+                                           _hargaDasar =[NSString stringWithFormat:@"%ld",(long)c.basicPrice];
                                            NSLog(@"Selected Value: %@", selectedValue);
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
@@ -208,26 +211,48 @@ shouldPerformDefaultActionForPerson:(ABRecordRef)person
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     _sharedUser = [User getUserProfile];
+    NSLog(@"data-->%@",[[DelimaCommonFunction sharedCommonFunction]md5:_sharedUser.passwd]);
     int randNum = rand() % (111111 - 999999) + 0000000;
     NSDictionary *params = @{@"uname":_sharedUser.uname,
-                             @"passwd":[[DelimaCommonFunction sharedCommonFunction]md5:_sharedUser.passwd],
+                             @"passwd":_sharedUser.passwd,
                              @"mercode":_sharedUser.merchantCode,
-                             @"mernumber":_sharedUser.merNumber,
+                             @"mernumber":[NSString stringWithFormat:@"+%@",_sharedUser.merNumber],
                              @"terminal":_sharedUser.terminal,
                              @"traxId":[NSString stringWithFormat:@"%d",randNum],
                              @"prodcode":_prodKode,
                              @"recipientNumber":_hpTujuan.text,
                              @"billNumber":_hpTujuan.text,
                              @"bit61":_hpTujuan.text,
-                             @"amount":_hargaJual.text,
-                             @"feeadmin":@"1000",
+                             @"amount":_hargaDasar,
+                             @"feeadmin":@"1",
                              @"idx":@"3",
                              @"ref":_sharedUser.ref
                              };
     
     [API_BeliManager purchase:params p:^(NSArray *posts, NSError *error) {
         if (!error) {
-           
+            if(posts.count !=0){
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
+                UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
+                InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
+                purchaseContr.namaMitraString = _sharedUser.uname;
+                purchaseContr.noTujuanString = _hpTujuan.text;
+                if(![self.title isEqualToString:@"TopUp Pulsa"]){
+                    purchaseContr.typeString = @"Pulsa";
+                }
+                else{
+                    purchaseContr.typeString = @"Voucher Games";
+                }
+                purchaseContr.itemString = [NSString stringWithFormat:@"%@/%@",_opNameTextField.text,_hargaDasar];
+                purchaseContr.hargaText =  _hargaJual.text;
+                
+                nav.viewControllers =@[purchaseContr];
+                [self presentViewController:nav animated:YES completion:nil];
+            }
+            else{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            }
         }
     }];
     

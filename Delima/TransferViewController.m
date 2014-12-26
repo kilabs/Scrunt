@@ -68,7 +68,7 @@
 - (IBAction)postToServer:(id)sender {
     _user = [User getUserProfile];
     NSDictionary *params = @{@"uname":_user.uname,
-                             @"passwd":[[DelimaCommonFunction sharedCommonFunction]md5:_user.passwd],
+                             @"passwd":_user.passwd,
                              @"merCode":_user.merchantCode,
                              @"mernumber":_user.merNumber,
                              @"terminal":_user.terminal,
@@ -89,6 +89,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
+}
+- (IBAction)openContact:(id)sender {
 }
 /*
  #pragma mark - Navigation

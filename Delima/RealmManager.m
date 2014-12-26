@@ -26,6 +26,7 @@
         //        [GVUserDefaults standardUserDefaults].databaseVersion = 1;
         //        [self performMigrationIfNeeded];
         _realm = [RLMRealm defaultRealm];
+       
     }
     return self;
 }

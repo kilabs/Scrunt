@@ -55,7 +55,7 @@
 }
 
 + (NSString *)primaryKey {
-    return @"guid";
+    return @"id";
 }
 + (User *)getUserProfile {
     RLMResults *array = [User allObjects];

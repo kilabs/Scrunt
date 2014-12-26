@@ -6,19 +6,19 @@
 	<array>
 		<dict>
 			<key>kode</key>
-			<string>1</string>
+			<string>001001</string>
 			<key>name</key>
 			<string>Telkom</string>
 		</dict>
 		<dict>
 			<key>kode</key>
-			<string>2</string>
+			<string>001001</string>
 			<key>name</key>
 			<string>Flexi</string>
 		</dict>
 		<dict>
 			<key>kode</key>
-			<string>3</string>
+			<string>001001</string>
 			<key>name</key>
 			<string>Speedy</string>
 		</dict>
