@@ -114,6 +114,7 @@
     return _data.count;
 }
 - (IBAction)reloadData:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *params = @{
                              @"uname":_userActive.uname,
                              @"passwd":_userActive.passwd,
@@ -122,11 +123,26 @@
                              @"mercode":_userActive.merchantCode,
                              
                              };
-    NSLog(@"params-->%@",params);
     [API_CheckSaldo checkSaldo:params p:^(NSArray *posts, NSError *error) {
         if(!error){
             if (posts.count>0) {
-                NSLog(@"post->%@",posts);
+                
+                if(![_userActive.saldo isEqualToString:[[[posts objectAtIndex:0]objectForKey:@"amt"] stringByReplacingOccurrencesOfString:@"\"" withString:@""]]){
+                    _userActive.saldo =[[posts objectAtIndex:0]objectForKey:@"amt"];
+                    [User save:_userActive withRevision:YES];
+                    NSLog(@"_user active-->%@",_userActive);
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                }
+                else{
+                    NSLog(@"_user active before-->%@",_userActive);
+                    _userActive.saldo =[[posts objectAtIndex:0]objectForKey:@"amt"];
+                    _userActive.updatedAt = [NSDate date];
+                    [User save:_userActive withRevision:YES];
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                    
+                    NSLog(@"sama->%@",_userActive);
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                }
             }
         }
     }];
