@@ -229,9 +229,25 @@ shouldPerformDefaultActionForPerson:(ABRecordRef)person
                              @"ref":_sharedUser.ref
                              };
     
+    ///use this shit
+    UIStoryboard * storyboard = self.storyboard;
+    NSString * storyboardName = [storyboard valueForKey:@"name"];
+
+    NSDictionary *favParams = @{
+                                @"mercode":_sharedUser.merchantCode,
+                                @"amount":_hargaDasar,
+                                @"prodcode":_prodKode,
+                                @"denom": _denomTextfield.text,
+                                @"hargaJual":_hargaJual.text,
+                                @"recipientNumber":_hpTujuan.text,
+                                @"storyboardName":storyboardName,
+                                @"controllerName":@"SharedBeliViewController",
+                                };
+    
     [API_BeliManager purchase:params p:^(NSArray *posts, NSError *error) {
         if (!error) {
             if(posts.count !=0){
+                [PropertyHelper setFavorite:favParams];
                 [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
                 UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
@@ -251,7 +267,7 @@ shouldPerformDefaultActionForPerson:(ABRecordRef)person
                 [self presentViewController:nav animated:YES completion:nil];
             }
             else{
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
             }
         }
     }];

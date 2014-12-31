@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class User;
 @interface CashInViewController : UIViewController
-
+@property (nonatomic,strong)User *sharedUser;
 @end

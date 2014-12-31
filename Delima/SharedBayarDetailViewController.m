@@ -84,6 +84,7 @@
     [API_BayarManager paid:params p:^(NSArray *posts, NSError *error) {
         if(!error){
             if(posts.count !=0){
+                [PropertyHelper setFavorite:params];
                 [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 UIStoryboard *s = [UIStoryboard storyboardWithName:@"Inquiry" bundle:nil];
                 

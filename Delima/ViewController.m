@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     _state = 0;
+    self.revealViewController.panGestureRecognizer.enabled=YES;
     _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
     [_tableData reloadData];
     [_tableData reloadData];
@@ -49,6 +50,7 @@
     if (![_userActive.sessionid isEqualToString:@""]) {
         [self reloadData];
         [_tableData reloadData];
+        [self reloadData:nil];
         
     }
     else{
@@ -130,16 +132,15 @@
                 if(![_userActive.saldo isEqualToString:[[[posts objectAtIndex:0]objectForKey:@"amt"] stringByReplacingOccurrencesOfString:@"\"" withString:@""]]){
                     _userActive.saldo =[[posts objectAtIndex:0]objectForKey:@"amt"];
                     [User save:_userActive withRevision:YES];
-                    NSLog(@"_user active-->%@",_userActive);
+                    [self reloadData];
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 }
                 else{
-                    NSLog(@"_user active before-->%@",_userActive);
                     _userActive.saldo =[[posts objectAtIndex:0]objectForKey:@"amt"];
                     _userActive.updatedAt = [NSDate date];
                     [User save:_userActive withRevision:YES];
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-                    
+                    [self reloadData];
                     NSLog(@"sama->%@",_userActive);
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 }

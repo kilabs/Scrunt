@@ -17,8 +17,9 @@
 #import "BayarListTableViewController.h"
 #import "BeliListTableViewController.h"
 #import "PengaturanTableViewController.h"
+#import "RealmManager.h"
 #import <SWRevealViewController.h>
-@interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableVIew;
 @property (strong,nonatomic) NSArray *menu;
 @end
@@ -113,11 +114,42 @@
         [self.revealViewController pushFrontViewController:nav animated:YES];
     }
     if (indexPath.row ==7) {
-    
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Keluar Aplikasi?"
+                                                          message:@"Anda Yakin akan keluar aplikasi ?."
+                                                         delegate:self
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:@"Batal", nil];
+        
+        [message show];
     }
     
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self doLogout];
+            break;
+            
+        default:
+            break;
+    }
+}
+-(void)doLogout{
+    [[RealmManager sharedMORealmSingleton]truncateRealm];
+    
+    UINavigationController *nav = (UINavigationController *) self.revealViewController.frontViewController;
+    UIStoryboard *storyBoard;
+    // Get the storyboard named secondStoryBoard from the main bundle:
+    storyBoard= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    nav.viewControllers = [NSArray arrayWithObjects:controller, nil];
+    // Then push the new view controller in the usual way:
+    [self.revealViewController pushFrontViewController:nav animated:YES];
+
+}
 /*
+ 
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation

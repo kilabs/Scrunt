@@ -15,6 +15,7 @@
 #import "InvoiceViewController.h"
 #import "DelimaCommonFunction.h"
 #import "InquiryViewController.h"
+#import "API+CashIn.h"
 #import <ActionSheetStringPicker.h>
 
 @interface InquiryViewController ()
@@ -53,44 +54,88 @@
 - (IBAction)submitToServer:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     _sharedUser = [User getUserProfile];
-    int randNum = rand() % (111111 - 999999) + 0000000;
-    NSDictionary *params = @{@"uname":_sharedUser.uname,
-                             @"amount":@"1",
-                             @"passwd":_sharedUser.passwd,
-                             @"mercode":_sharedUser.merchantCode,
-                             @"mernumber":[NSString stringWithFormat:@"+%@",_sharedUser.merNumber],
-                             @"terminal":_sharedUser.terminal,
-                             @"traxId":[NSString stringWithFormat:@"%d",randNum],
-                             @"prodcode":_prodCode,
-                             @"recipientNumber":_noPelanggan.text,
-                             @"billNumber":_noPelanggan.text,
-                             @"bit61":_bit61,
-                             @"feeadmin":_fee,
-                             @"idx":@"3",
-                             @"ref":_sharedUser.ref
-                             };
-    [API_BayarManager paid:params p:^(NSArray *posts, NSError *error) {
-        if (!error) {
-            if(posts.count !=0){
-                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-                UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
-                UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
-                InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
-                purchaseContr.feeText = _noTujuannamaMitraString;
-                purchaseContr.namaMitraString = _sharedUser.uname;
-                purchaseContr.noTujuanString = _noPelanggannamaMitraString;
-
-                purchaseContr.itemString = _prodName;
-                purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
-                purchaseContr.hargaText = _harganamaMitraString;
-                nav.viewControllers =@[purchaseContr];
-                [self presentViewController:nav animated:YES completion:nil];
+    
+    if(_bit61)
+    {
+        int randNum = rand() % (111111 - 999999) + 0000000;
+        NSDictionary *params = @{@"uname":_sharedUser.uname,
+                                 @"amount":@"1",
+                                 @"passwd":_sharedUser.passwd,
+                                 @"mercode":_sharedUser.merchantCode,
+                                 @"mernumber":[NSString stringWithFormat:@"+%@",_sharedUser.merNumber],
+                                 @"terminal":_sharedUser.terminal,
+                                 @"traxId":[NSString stringWithFormat:@"%d",randNum],
+                                 @"prodcode":_prodCode,
+                                 @"recipientNumber":_noPelanggan.text,
+                                 @"billNumber":_noPelanggan.text,
+                                 @"bit61":_bit61,
+                                 @"feeadmin":_fee,
+                                 @"idx":@"3",
+                                 @"ref":_sharedUser.ref
+                                 };
+        [API_BayarManager paid:params p:^(NSArray *posts, NSError *error) {
+            if (!error) {
+                if(posts.count !=0){
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                    UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
+                    UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
+                    InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
+                    purchaseContr.feeText = _noTujuannamaMitraString;
+                    purchaseContr.namaMitraString = _sharedUser.uname;
+                    purchaseContr.noTujuanString = _noPelanggannamaMitraString;
+                    
+                    purchaseContr.itemString = _prodName;
+                    purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
+                    purchaseContr.hargaText = _harganamaMitraString;
+                    nav.viewControllers =@[purchaseContr];
+                    [self presentViewController:nav animated:YES completion:nil];
+                }
+                else{
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                }
             }
-            else{
-                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }];
+    }
+    else if(_sessionid){
+        NSDictionary *params = @{@"uname":_sharedUser.uname,
+                                 @"amount":_harga.text,
+                                 @"passwd":_sharedUser.passwd,
+                                 @"mercode":_sharedUser.merchantCode,
+                                 @"mernumber":[NSString stringWithFormat:@"+%@",_sharedUser.merNumber],
+                                 @"terminal":_sharedUser.terminal,
+                                 @"traxId":_trxId,
+                                 @"recName":_namaPelanggan.text,
+                                 @"feeAdm":_noTujuan.text,
+                                 @"prodcode":_prodCode,
+                                 @"recipientNumber":_noPelanggan.text,
+                                 @"billNumber":_noPelanggan.text,
+                                 @"sessionid":_sessionid,
+                                 };
+        NSLog(@"params->%@",params);
+        [API_CashIn cashIn:params p:^(NSArray *posts, NSError *error){
+            if (!error) {
+                if(posts.count !=0){
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                    UIStoryboard *s = [UIStoryboard storyboardWithName:@"Invoice" bundle:nil];
+                    UINavigationController *nav = [s instantiateViewControllerWithIdentifier:@"InvoiceNavigationController"];
+                    InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
+                    purchaseContr.feeText = _noTujuannamaMitraString;
+                    purchaseContr.namaMitraString = _sharedUser.uname;
+                    purchaseContr.noTujuanString = _noPelanggannamaMitraString;
+                    
+                    purchaseContr.itemString = _prodName;
+                    purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
+                    purchaseContr.hargaText = _harganamaMitraString;
+                    nav.viewControllers =@[purchaseContr];
+                    [self presentViewController:nav animated:YES completion:nil];
+                }
+                else{
+                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+                }
             }
-        }
-    }];
+        }];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,13 +144,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -11,5 +11,7 @@
 @interface PropertyHelper : NSObject
 + (id)readFromKey:(NSString *)key;
 + (id)readFromKeys:(NSArray *)keys;
++ (void)setFavorite:(NSDictionary *)params;
++ (NSDictionary *)getTempFavorite;
 + (id)readFromKeys:(NSArray *)keys withPropertiesPath:(NSString *)propertiesPath;
 @end

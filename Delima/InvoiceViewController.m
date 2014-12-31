@@ -9,6 +9,7 @@
 #import "InvoiceViewController.h"
 #import "DelimaCommonFunction.h"
 #import "TransactionHistory.h"
+#import "PropertyHelper.h"
 @interface InvoiceViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *namaMitra;
 @property (strong, nonatomic) IBOutlet UILabel *trxDate;
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *noTujuan;
 @property (strong, nonatomic) IBOutlet UILabel *totalHarga;
 @property (strong, nonatomic) IBOutlet UILabel *feeNominal;
+@property (strong, nonatomic) IBOutlet UIView *favoriteView;
 
 //@property (strong, nonatomic) IBOutlet UILabel *totalText;
 @property (strong, nonatomic) IBOutlet UILabel *dataHarga;
@@ -28,6 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /////set favorite
+    CGRect frame = _favoriteView.frame;
+    frame.origin.y = self.view.frame.size.height-60;
+    _favoriteView.frame = frame;
+    //////
+    
+    
     _scroller.delegate  =self;
     _scroller.contentSize = CGSizeMake(320, 600);
     _namaMitra.text = _namaMitraString;
@@ -38,7 +47,7 @@
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSNumber * myNumber = [f numberFromString:_hargaText];
-    if ([_feeText isEqualToString:@""]) {
+    if ([_feeText isEqualToString:@""]||!_feeText) {
         _feeText=@"0";
     };
     NSNumber * myNumbers = [f numberFromString:_feeText];
@@ -54,13 +63,17 @@
     NSLog(@"data-->%@",_dataHarga.text);
     NSLog(@"data-->%@",_noTujuan.text);
     NSLog(@"data-->%@",_namaPelanggan);
+    
+    
     NSLog(@"Pembaayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text);
     TransactionHistory *t = [[TransactionHistory alloc]init];
     t.executeDate =[NSDate date];
     t.tujuan = _noTujuan.text;
     t.itemName = _item.text;
     t.price =_dataHarga.text;
-    t.keterangan =[NSString stringWithFormat:@"Pembaayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
+    if(!_namaPelanggan)
+        _namaPelanggan = @"";
+    t.keterangan =[NSString stringWithFormat:@"Pembayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
     [TransactionHistory save:t withRevision:YES];
     
     
@@ -72,6 +85,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)closeWindow:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
     [[[self presentingViewController] presentingViewController]  dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)saveToImage:(id)sender {
@@ -96,6 +110,10 @@
     if (image != nil) {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     }
+}
+- (IBAction)simpanFavorite:(id)sender {
+    NSLog(@"123-->%@",[PropertyHelper getTempFavorite]);
+    [PropertyHelper getTempFavorite];
 }
 
 /*

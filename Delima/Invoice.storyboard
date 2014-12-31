@@ -273,6 +273,23 @@
                                     </label>
                                 </subviews>
                             </scrollView>
+                            <view contentMode="scaleToFill" id="jem-u8-4rx">
+                                <rect key="frame" x="0.0" y="254" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3E8-pu-irI">
+                                        <rect key="frame" x="16" y="11" width="288" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.76470588240000004" green="0.054901960780000002" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Simpan Ke Favorit"/>
+                                        <connections>
+                                            <action selector="simpanFavorite:" destination="BUc-lo-Oi7" eventType="touchUpInside" id="G3r-06-aqD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -290,6 +307,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dataHarga" destination="IlK-FL-b3q" id="ljo-Mj-NzU"/>
+                        <outlet property="favoriteView" destination="jem-u8-4rx" id="Pzh-xb-cvy"/>
                         <outlet property="feeNominal" destination="qLy-Pd-UbU" id="q2S-1U-Jd8"/>
                         <outlet property="item" destination="ehT-PU-6p2" id="uGC-ED-pUt"/>
                         <outlet property="namaMitra" destination="3Dg-GI-RGh" id="LsZ-BA-gCh"/>

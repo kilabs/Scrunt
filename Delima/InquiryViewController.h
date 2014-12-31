@@ -16,8 +16,11 @@
 @property (strong, nonatomic) NSString *noTujuannamaMitraString;
 @property (strong, nonatomic) NSString *harganamaMitraString;
 @property (strong,nonatomic) NSString *bit61;
+@property (strong,nonatomic) NSString *trxId;
+@property (strong,nonatomic) NSString *sessionid;
 @property (strong,nonatomic) NSString *prodCode;
 @property (strong,nonatomic) NSString *fee;
+
 @property (strong,nonatomic) NSString *prodName;
 
 @end

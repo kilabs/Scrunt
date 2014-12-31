@@ -10,6 +10,7 @@
 
 static NSString *_propertiesPath;
 static NSDictionary *_dictionary;
+static NSDictionary *tempDictionaryFavorite;
 
 @implementation PropertyHelper
 
@@ -39,5 +40,11 @@ static NSDictionary *_dictionary;
         return [self readFromKeysRecursively:keys];
     }
 }
-
++ (void)setFavorite:(NSDictionary *)params{
+    NSLog(@"params-->%@",params);
+    tempDictionaryFavorite = params;
+}
++(NSDictionary *)getTempFavorite{
+    return tempDictionaryFavorite;
+}
 @end

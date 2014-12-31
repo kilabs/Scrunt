@@ -82,6 +82,7 @@
 		0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD2FF1A32230300DE3B5B /* globalVariable.m */; };
 		0CAAD3031A32235F00DE3B5B /* delimaAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3021A32235F00DE3B5B /* delimaAPIManager.m */; };
 		0CAAD3171A32856A00DE3B5B /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAD3161A32856A00DE3B5B /* MenuCell.m */; };
+		0CABCCA41A4E70CA008AF4A7 /* API+CashIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CABCCA31A4E70CA008AF4A7 /* API+CashIn.m */; };
 		0CDC13BF1A3430380074B6CF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13BE1A3430380074B6CF /* LoginViewController.m */; };
 		0CDC13C21A3434CF0074B6CF /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC13C11A3434CE0074B6CF /* MainLoginViewController.m */; };
 		0CEC8EFE1A49A52900F86BCB /* TransactionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC8EFD1A49A52900F86BCB /* TransactionHistory.m */; };
@@ -215,6 +216,8 @@
 		0CAAD3051A32270100DE3B5B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0CAAD3151A32856A00DE3B5B /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
 		0CAAD3161A32856A00DE3B5B /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		0CABCCA21A4E70CA008AF4A7 /* API+CashIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "API+CashIn.h"; sourceTree = "<group>"; };
+		0CABCCA31A4E70CA008AF4A7 /* API+CashIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "API+CashIn.m"; sourceTree = "<group>"; };
 		0CDC13BD1A3430380074B6CF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0CDC13BE1A3430380074B6CF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CDC13C01A3434CE0074B6CF /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 				0C7425721A48623800DDAE72 /* API+BayarManager.m */,
 				0C3C6C841A4C69D10015147A /* API+CheckSaldo.h */,
 				0C3C6C851A4C69D10015147A /* API+CheckSaldo.m */,
+				0CABCCA21A4E70CA008AF4A7 /* API+CashIn.h */,
+				0CABCCA31A4E70CA008AF4A7 /* API+CashIn.m */,
 			);
 			name = "API Manager";
 			sourceTree = "<group>";
@@ -898,6 +903,7 @@
 				0C2905041A333EB200227B1E /* User.m in Sources */,
 				0C74255D1A4803C700DDAE72 /* FeeTableViewController.m in Sources */,
 				0C1B88651A40746C00266057 /* PropertyHelper.m in Sources */,
+				0CABCCA41A4E70CA008AF4A7 /* API+CashIn.m in Sources */,
 				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
 				0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */,
 				0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */,
