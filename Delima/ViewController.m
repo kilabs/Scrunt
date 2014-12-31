@@ -19,6 +19,7 @@
 #import <AMSmoothAlertConstants.h>
 #import <SWRevealViewController.h>
 #import "HomeTableViewCell.h"
+#import "Favorite.h"
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,AMSmoothAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UITableView *tableData;
@@ -56,7 +57,6 @@
         
     }
     else{
-        NSLog(@"data->%d",daylight);
         UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
         UINavigationController *nav = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
         LoginViewController *login = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
@@ -113,6 +113,8 @@
         return cell;
     }
     else{
+        HomeTableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
+        cell.productName.text = @"123";
         return nil;
         
     }
@@ -132,7 +134,12 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _data.count;
+    if (_state==0) {
+         return _data.count;
+    }
+    else{
+        return 100;
+    }
 }
 - (IBAction)reloadData:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
