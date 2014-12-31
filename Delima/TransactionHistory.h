@@ -16,8 +16,18 @@
 @property NSDate *executeDate;
 @property NSString *itemName;
 @property NSString *price;
+@property NSString *parent;
 @property NSString *tujuan;
 @property NSString *keterangan;
+@property NSInteger type;
+
+
+//////ingat!
+//1 beli
+//2.bayar
+//3.cashin
+//4.transfer bank
+//
 + (void)save:(TransactionHistory *)fee withRevision:(BOOL)revision;
 +(NSArray *)getAllHistory;
 @end

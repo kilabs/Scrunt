@@ -18,6 +18,7 @@
 #import <AMSmoothAlertView.h>
 #import <AMSmoothAlertConstants.h>
 #import <SWRevealViewController.h>
+#import "HomeTableViewCell.h"
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,AMSmoothAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UITableView *tableData;
@@ -107,10 +108,8 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (_state==0) {
-        UITableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
-        TransactionHistory *t;
-        t = [_data objectAtIndex:indexPath.row];
-        cell.textLabel.text =t.itemName;
+        HomeTableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
+        cell.transaction = [_data objectAtIndex:indexPath.row];
         return cell;
     }
     else{

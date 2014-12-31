@@ -83,7 +83,8 @@
                     purchaseContr.feeText = _noTujuannamaMitraString;
                     purchaseContr.namaMitraString = _sharedUser.uname;
                     purchaseContr.noTujuanString = _noPelanggannamaMitraString;
-                    
+                    purchaseContr.isBayar = 1;
+                     purchaseContr.typeString = [NSString stringWithFormat:@"Bill %@",_prodName];
                     purchaseContr.itemString = _prodName;
                     purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
                     purchaseContr.hargaText = _harganamaMitraString;
@@ -111,7 +112,6 @@
                                  @"billNumber":_noPelanggan.text,
                                  @"sessionid":_sessionid,
                                  };
-        NSLog(@"params->%@",params);
         [API_CashIn cashIn:params p:^(NSArray *posts, NSError *error){
             if (!error) {
                 if(posts.count !=0){
@@ -122,10 +122,11 @@
                     purchaseContr.feeText = _noTujuannamaMitraString;
                     purchaseContr.namaMitraString = _sharedUser.uname;
                     purchaseContr.noTujuanString = _noPelanggannamaMitraString;
-                    
+                    purchaseContr.typeString = [NSString stringWithFormat:@"Bill %@",_prodName];
                     purchaseContr.itemString = _prodName;
                     purchaseContr.namaPelanggan = _namaPelanggannamaMitraString;
                     purchaseContr.hargaText = _harganamaMitraString;
+                    purchaseContr.isBayar = 1;
                     nav.viewControllers =@[purchaseContr];
                     [self presentViewController:nav animated:YES completion:nil];
                 }

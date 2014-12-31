@@ -34,6 +34,7 @@
 		0C7425731A48623800DDAE72 /* API+BayarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425721A48623800DDAE72 /* API+BayarManager.m */; };
 		0C7425751A48708100DDAE72 /* Inquiry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7425741A48708000DDAE72 /* Inquiry.storyboard */; };
 		0C7425791A4875E500DDAE72 /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7425781A4875E500DDAE72 /* InquiryViewController.m */; };
+		0C8327131A544B440052AED4 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8327121A544B440052AED4 /* HomeTableViewCell.m */; };
 		0C96A69F1A419D510092B5E2 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68B1A419D510092B5E2 /* bank.plist */; };
 		0C96A6A01A419D510092B5E2 /* Voucher Game.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68C1A419D510092B5E2 /* Voucher Game.plist */; };
 		0C96A6A11A419D510092B5E2 /* TopUp Pulsa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */; };
@@ -152,6 +153,8 @@
 		0C7425741A48708000DDAE72 /* Inquiry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inquiry.storyboard; sourceTree = "<group>"; };
 		0C7425771A4875E500DDAE72 /* InquiryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryViewController.h; sourceTree = "<group>"; };
 		0C7425781A4875E500DDAE72 /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
+		0C8327111A544B440052AED4 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		0C8327121A544B440052AED4 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		0C96A68B1A419D510092B5E2 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		0C96A68C1A419D510092B5E2 /* Voucher Game.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voucher Game.plist"; sourceTree = "<group>"; };
 		0C96A68D1A419D510092B5E2 /* TopUp Pulsa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TopUp Pulsa.plist"; sourceTree = "<group>"; };
@@ -422,6 +425,15 @@
 			name = Inquiry;
 			sourceTree = "<group>";
 		};
+		0C8327101A544B300052AED4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C8327111A544B440052AED4 /* HomeTableViewCell.h */,
+				0C8327121A544B440052AED4 /* HomeTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		0C96A6911A419D510092B5E2 /* seluler */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +565,7 @@
 		0CAAD2E01A320B3000DE3B5B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0C8327101A544B300052AED4 /* Cell */,
 				0C3055F61A31F3F600F4D4B2 /* ViewController.h */,
 				0C3055F71A31F3F600F4D4B2 /* ViewController.m */,
 			);
@@ -906,6 +919,7 @@
 				0CABCCA41A4E70CA008AF4A7 /* API+CashIn.m in Sources */,
 				0CAAD3001A32230300DE3B5B /* globalVariable.m in Sources */,
 				0C7425631A48197400DDAE72 /* FeeDetailViewController.m in Sources */,
+				0C8327131A544B440052AED4 /* HomeTableViewCell.m in Sources */,
 				0C7425421A471EEE00DDAE72 /* API+BeliManager.m in Sources */,
 				0C7425511A47EF2800DDAE72 /* PengaturanTableViewController.m in Sources */,
 				0C7425791A4875E500DDAE72 /* InquiryViewController.m in Sources */,

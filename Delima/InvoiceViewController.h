@@ -20,5 +20,6 @@
 @property (strong, nonatomic) NSString *feeText;
 @property (strong, nonatomic) NSString *totalText;
 @property (strong, nonatomic) NSString *namaPelanggan;
+@property (nonatomic) NSInteger transactionType;
 @property (nonatomic) BOOL isBayar;
 @end

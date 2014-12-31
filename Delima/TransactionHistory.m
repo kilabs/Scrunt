@@ -30,12 +30,15 @@
              @"executeDate" : @0,
              @"itemName" : @"",
              @"price" : @"",
+             @"parent" : @"",
              @"tujuan" : @"",
              @"keterangan" : @"",
+             @"type":@0
              };
 }
 +(NSArray *)getAllHistory{
-    RLMResults *objects = [TransactionHistory allObjects];
+    RLMResults *objects = [[TransactionHistory allObjects]
+                              sortedResultsUsingProperty:@"createdAt" ascending:NO];
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:objects.count];
     for(id object in objects) {
         TransactionHistory *item = [[TransactionHistory alloc] initWithObject:object];

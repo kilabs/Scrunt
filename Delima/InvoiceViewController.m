@@ -71,12 +71,23 @@
     t.tujuan = _noTujuan.text;
     t.itemName = _item.text;
     t.price =_dataHarga.text;
+    t.parent = _typeString;
+    NSString *state;
+    NSLog(@"is bayar--->%d",_isBayar);
+    if(_isBayar){
+        state = @"Pembayaran";
+        t.type = 2;}
+    else{
+        state = @"Pembelian";
+        t.type = 1;}
+    
+    
     if(!_namaPelanggan)
         _namaPelanggan = @"";
-    t.keterangan =[NSString stringWithFormat:@"Pembayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
+    t.keterangan =[NSString stringWithFormat:@"%@ %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",state,_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
     [TransactionHistory save:t withRevision:YES];
     
-    
+    NSLog(@"Transaction History Key->%@",[TransactionHistory allObjects]);
     // Do any additional setup after loading the view.
 }
 

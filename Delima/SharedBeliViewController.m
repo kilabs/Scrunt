@@ -254,15 +254,10 @@ shouldPerformDefaultActionForPerson:(ABRecordRef)person
                 InvoiceViewController *purchaseContr = (InvoiceViewController *)[s instantiateViewControllerWithIdentifier:@"InvoiceViewController"];
                 purchaseContr.namaMitraString = _sharedUser.uname;
                 purchaseContr.noTujuanString = _hpTujuan.text;
-                if(![self.title isEqualToString:@"TopUp Pulsa"]){
-                    purchaseContr.typeString = @"Pulsa";
-                }
-                else{
-                    purchaseContr.typeString = @"Voucher Games";
-                }
+                 purchaseContr.typeString = [NSString stringWithFormat:@"%@;%@",self.title,_opNameTextField.text];
                 purchaseContr.itemString = [NSString stringWithFormat:@"%@/%@",_opNameTextField.text,_hargaDasar];
                 purchaseContr.hargaText =  _hargaJual.text;
-                
+                purchaseContr.isBayar = 0;
                 nav.viewControllers =@[purchaseContr];
                 [self presentViewController:nav animated:YES completion:nil];
             }
