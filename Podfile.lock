@@ -21,8 +21,11 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AMSmoothAlert (1.1):
+    - GPUImage
   - CRToast (0.0.7)
   - DZNSegmentedControl (1.2.2)
+  - GPUImage (0.1.6)
   - JVFloatLabeledTextField (1.0.0)
   - MBProgressHUD (0.9)
   - NSJSONSerialization-NSNullRemoval (1.0.1)
@@ -34,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - ActionSheetPicker-3.0
   - AFNetworking
+  - AMSmoothAlert
   - CRToast
   - DZNSegmentedControl
   - JVFloatLabeledTextField
@@ -45,8 +49,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: e94da444f041f0609a9511bafd9a84f545107026
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  AMSmoothAlert: 1b4bf6688b698a606a963c336b5060490f4d3db2
   CRToast: f9f2c4b29776d68ba24c4d621cba59a83fea921b
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
+  GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
   JVFloatLabeledTextField: c2b8124e439cf2b05fe5bb38f44358743588c1bd
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   NSJSONSerialization-NSNullRemoval: b3f02955f898d01205567e3f1292e4aae3ad547e

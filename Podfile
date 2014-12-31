@@ -11,5 +11,6 @@ target 'Delima' do
     pod 'MBProgressHUD'
 	pod 'DZNSegmentedControl'
     pod 'NSJSONSerialization-NSNullRemoval'
+    pod 'AMSmoothAlert'
 end
 

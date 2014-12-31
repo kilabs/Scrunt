@@ -15,17 +15,21 @@
 #import "LoginViewController.h"
 #import "TransactionHistory.h"
 #import "API+CheckSaldo.h"
+#import <AMSmoothAlertView.h>
+#import <AMSmoothAlertConstants.h>
 #import <SWRevealViewController.h>
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,AMSmoothAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UITableView *tableData;
 @property (strong, nonatomic) IBOutlet UILabel *balanceLabel;
 @property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) AMSmoothAlertView *alert;
 @property (nonatomic) NSInteger state;
 
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,14 +46,7 @@
     [_segmentedControl addTarget:self
                           action:@selector(segmentedControlValueChanged:)
                 forControlEvents:UIControlEventValueChanged];
-    NSLog(@"View Didload");
-    // Do any additional setup after loading the view, typically from a nib.
-}
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    NSLog(@"View viewWillAppear");
-    [self setDefaultDelimaNavigationBar];
-    self.revealViewController.panGestureRecognizer.enabled=YES;
+    
     _userActive = [User getUserProfile];
     if (![_userActive.sessionid isEqualToString:@""]) {
         [self reloadData];
@@ -58,13 +55,19 @@
         
     }
     else{
+        NSLog(@"data->%d",daylight);
         UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
         UINavigationController *nav = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
         LoginViewController *login = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         login = nav.viewControllers[0];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
-    
+    // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self setDefaultDelimaNavigationBar];
+    self.revealViewController.panGestureRecognizer.enabled=YES;
     
 }
 
@@ -94,6 +97,7 @@
         case 1:
             _state=1;
             NSLog(@"Favorit");
+            [_tableData reloadData];
             break;
         default:
             break;
@@ -101,21 +105,33 @@
     
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
-    TransactionHistory *t;
+    
     if (_state==0) {
+        UITableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
+        TransactionHistory *t;
         t = [_data objectAtIndex:indexPath.row];
+        cell.textLabel.text =t.itemName;
+        return cell;
     }
     else{
+        return nil;
         
     }
-    cell.textLabel.text =t.itemName;
-    return cell;
+    
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (_state==0) {
+        TransactionHistory *t;
+        t = [_data objectAtIndex:indexPath.row];
+        [self openPopup:t.keterangan];
+    }
+    else{
+        
+        
+    }
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _data.count;
 }
@@ -145,11 +161,61 @@
                     [User save:_userActive withRevision:YES];
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                     [self reloadData];
-                    NSLog(@"sama->%@",_userActive);
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 }
             }
         }
+        else{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }
     }];
 }
+
+
+////alert
+
+- (void)openPopup:(NSString *)message {
+    NSLog(@"data-->%@",message);
+    _alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:@"Histori" andText:message andCancelButton:NO forAlertType:AlertSuccess];
+    _alert.delegate = self;
+    [_alert.defaultButton setTitle:@"Tutup" forState:UIControlStateNormal];
+    _alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
+        if(button == alertObj.defaultButton) {
+            NSLog(@"Default");
+        } else {
+            NSLog(@"Others");
+        }
+    };
+    [_alert show];
+}
+
+#pragma mark - Delegates
+- (void)alertView:(AMSmoothAlertView *)alertView didDismissWithButton:(UIButton *)button {
+    if (alertView == _alert) {
+        if (button == _alert.defaultButton) {
+            NSLog(@"Default button touched!");
+        }
+        if (button == _alert.cancelButton) {
+            NSLog(@"Cancel button touched!");
+        }
+    }
+}
+
+- (void)alertViewWillShow:(AMSmoothAlertView *)alertView {
+    if (alertView.tag == 0)
+        NSLog(@"AlertView Will Show: '%@'", alertView.titleLabel.text);
+}
+
+- (void)alertViewDidShow:(AMSmoothAlertView *)alertView {
+    NSLog(@"AlertView Did Show: '%@'", alertView.titleLabel.text);
+}
+
+- (void)alertViewWillDismiss:(AMSmoothAlertView *)alertView {
+    NSLog(@"AlertView Will Dismiss: '%@'", alertView.titleLabel.text);
+}
+
+- (void)alertViewDidDismiss:(AMSmoothAlertView *)alertView {
+    NSLog(@"AlertView Did Dismiss: '%@'", alertView.titleLabel.text);
+}
+
 @end
