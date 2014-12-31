@@ -28,22 +28,26 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    
     _state = 0;
     self.revealViewController.panGestureRecognizer.enabled=YES;
     _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
     [_tableData reloadData];
     [_tableData reloadData];
-    [super viewDidLoad];
+    
+    _tableData.tableFooterView = [[UIView alloc]init];
     self.view.backgroundColor =[UIColor whiteColor];
     _segmentedControl.selectedSegmentIndex =0;
     [_segmentedControl addTarget:self
                           action:@selector(segmentedControlValueChanged:)
                 forControlEvents:UIControlEventValueChanged];
-    
+    NSLog(@"View Didload");
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    NSLog(@"View viewWillAppear");
     [self setDefaultDelimaNavigationBar];
     self.revealViewController.panGestureRecognizer.enabled=YES;
     _userActive = [User getUserProfile];

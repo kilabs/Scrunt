@@ -9,6 +9,7 @@
 #import "RealmManager.h"
 #import "User.h"
 #import "Favorite.h"
+#import "TransactionHistory.h"
 @implementation RealmManager
 + (RealmManager *)sharedMORealmSingleton {
     static dispatch_once_t pred;
@@ -35,6 +36,7 @@
     [_realm beginWriteTransaction];
     [_realm deleteObjects:[User allObjects]];
     [_realm deleteObjects:[Favorite allObjects]];
+    [_realm deleteObjects:[TransactionHistory allObjects]];
     [_realm commitWriteTransaction];
 }
 @end
