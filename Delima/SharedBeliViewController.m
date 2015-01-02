@@ -31,8 +31,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *hargaJual;
 @property (strong, nonatomic) IBOutlet UITextField *hpTujuan;
 @property (strong, nonatomic) IBOutlet UIButton *buttonKirim;
-@property (strong, nonatomic) NSString *prodKode;
-@property (strong, nonatomic) NSString *hargaDasar;
 @property (strong, nonatomic) User *sharedUser;
 
 @end
@@ -46,6 +44,11 @@
     _hargaJual.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
     _hpTujuan.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
     _hpTujuan.delegate = self;
+    
+    _opNameTextField.text = _passingDataVendorName;
+    _denomTextfield.text = _passingDataDenom;
+    _hargaJual.text = _passingDataHargaJual;
+    _hpTujuan.text = _passingDataTujuan;
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -237,11 +240,14 @@ shouldPerformDefaultActionForPerson:(ABRecordRef)person
                                 @"mercode":_sharedUser.merchantCode,
                                 @"amount":_hargaDasar,
                                 @"prodcode":_prodKode,
+                                @"subCategory":self.title,
+                                @"prodName":_opNameTextField.text,
                                 @"denom": _denomTextfield.text,
                                 @"hargaJual":_hargaJual.text,
                                 @"recipientNumber":_hpTujuan.text,
+                                @"hargaDasar":_hargaDasar,
                                 @"storyboardName":storyboardName,
-                                @"controllerName":@"SharedBeliViewController",
+                                @"controllerName":@"SharedBeliViewController"
                                 };
     
     [API_BeliManager purchase:params p:^(NSArray *posts, NSError *error) {

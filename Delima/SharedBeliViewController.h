@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SharedBeliViewController : UIViewController
-
+@property (nonatomic,strong)NSString *passingDataVendorName;
+@property (nonatomic,strong)NSString *passingDataDenom;
+@property (nonatomic,strong)NSString *passingDataHargaJual;
+@property (nonatomic,strong)NSString *passingDataTujuan;
+@property (strong, nonatomic) NSString *prodKode;
+@property (strong, nonatomic) NSString *hargaDasar;
 @end

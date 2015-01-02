@@ -114,6 +114,9 @@
                                 <segment title="History"/>
                                 <segment title="Favorite"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentedControlValueChanged:" destination="z6G-Nl-7O4" eventType="valueChanged" id="909-1O-ziL"/>
+                            </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="reload" id="1rX-qp-7da">
                             <connections>

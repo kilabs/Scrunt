@@ -13,6 +13,8 @@
 #import "DelimaCommonFunction.h"
 #import "TransferTableViewController.h"
 #import "LoginViewController.h"
+#import "SharedBayarDetailViewController.h"
+#import "SharedBeliViewController.h"
 #import "TransactionHistory.h"
 #import "API+CheckSaldo.h"
 #import <AMSmoothAlertView.h>
@@ -35,20 +37,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _state = 0;
-    self.revealViewController.panGestureRecognizer.enabled=YES;
-    _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
-    [_tableData reloadData];
-    [_tableData reloadData];
-    
-    _tableData.tableFooterView = [[UIView alloc]init];
-    self.view.backgroundColor =[UIColor whiteColor];
-    _segmentedControl.selectedSegmentIndex =0;
-    [_segmentedControl addTarget:self
-                          action:@selector(segmentedControlValueChanged:)
-                forControlEvents:UIControlEventValueChanged];
-    
     _userActive = [User getUserProfile];
     if (![_userActive.sessionid isEqualToString:@""]) {
         [self reloadData];
@@ -64,11 +52,22 @@
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
     // Do any additional setup after loading the view, typically from a nib.
+    _state = 0;
+    self.revealViewController.panGestureRecognizer.enabled=YES;
+    _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
+    [_tableData reloadData];
+    [_tableData reloadData];
+    
+    _tableData.tableFooterView = [[UIView alloc]init];
+    self.view.backgroundColor =[UIColor whiteColor];
+    
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     [self setDefaultDelimaNavigationBar];
     self.revealViewController.panGestureRecognizer.enabled=YES;
+    
     
 }
 
@@ -82,13 +81,9 @@
     _tableData.dataSource = self;
     [_tableData reloadData];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void)segmentedControlValueChanged:(id)sender{
-    switch (self.segmentedControl.selectedSegmentIndex)
+- (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender {
+    NSLog(@"data-->%d",_segmentedControl.selectedSegmentIndex);
+    switch (_segmentedControl.selectedSegmentIndex)
     {
         case 0:
             _state=0;
@@ -97,27 +92,28 @@
             break;
         case 1:
             _state=1;
-            NSLog(@"Favorit");
+            _data = [NSArray arrayWithArray:[Favorite getAllFavorite]];
             [_tableData reloadData];
-            break;
-        default:
             break;
     }
     
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    HomeTableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
+    
     if (_state==0) {
-        HomeTableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
         cell.transaction = [_data objectAtIndex:indexPath.row];
-        return cell;
     }
     else{
-        HomeTableViewCell *cell = [_tableData dequeueReusableCellWithIdentifier:@"Cell"];
-        cell.productName.text = @"123";
-        return nil;
-        
+        cell.favorite = [_data objectAtIndex:indexPath.row];
     }
+    return cell;
     
     
 }
@@ -128,18 +124,40 @@
         [self openPopup:t.keterangan];
     }
     else{
+        Favorite *f = [_data objectAtIndex:indexPath.row];
+        UIStoryboard *storyBoard;
+        // Get the storyboard named secondStoryBoard from the main bundle:
+        if([f.storyboardName isEqualToString:@"Beli"]){
+            storyBoard= [UIStoryboard storyboardWithName:f.storyboardName bundle:nil];
+            SharedBeliViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:f.controllerName];
+            controller.title = f.title;
+            controller.passingDataTujuan = f.recipientNumber;
+            controller.passingDataDenom = f.denom;
+            controller.passingDataHargaJual = f.hargaJual;
+            controller.passingDataVendorName = f.itemName;
+            controller.prodKode = f.prodcode;
+            controller.hargaDasar = f.hargaDasar;
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        else if ([f.storyboardName isEqualToString:@"Bayar"]){
+            storyBoard= [UIStoryboard storyboardWithName:f.storyboardName bundle:nil];
+            SharedBayarDetailViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:f.controllerName];
+            controller.title = f.title;
+            controller.passingDataVendorName= f.itemName;
+            controller.passingDataDenom = f.denom;
+            controller.passingDataHargaJual = f.hargaJual;
+            controller.passingDataTujuan = f.recipientNumber;
+            controller.prodKode = f.prodcode;
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        
         
         
     }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (_state==0) {
-         return _data.count;
-    }
-    else{
-        return 100;
-    }
+    return _data.count;
 }
 - (IBAction)reloadData:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -181,7 +199,6 @@
 ////alert
 
 - (void)openPopup:(NSString *)message {
-    NSLog(@"data-->%@",message);
     _alert = [[AMSmoothAlertView alloc]initDropAlertWithTitle:@"Histori" andText:message andCancelButton:NO forAlertType:AlertSuccess];
     _alert.delegate = self;
     [_alert.defaultButton setTitle:@"Tutup" forState:UIControlStateNormal];

@@ -8,6 +8,7 @@
 
 #import "HomeTableViewCell.h"
 #import "TransactionHistory.h"
+#import "Favorite.h"
 @implementation HomeTableViewCell
 
 - (void)awakeFromNib {
@@ -32,5 +33,19 @@
     _transactionDate.text = _transaction.itemName;
     _productName.text = [_transaction.parent stringByReplacingOccurrencesOfString:@";" withString:@" "];
     _price.text = _transaction.price;
+}
+-(void)setFavorite:(Favorite *)favorite{
+    _favorite = favorite;
+    switch (_favorite.type) {
+        case 1:
+            [_icon setImage:[UIImage imageNamed:@"buy"]];
+            break;
+        case 2:
+            [_icon setImage:[UIImage imageNamed:@"bill"]];
+            break;
+    }
+    _transactionDate.text = _favorite.itemName;
+    _productName.text = [_favorite.parent stringByReplacingOccurrencesOfString:@";" withString:@" "];
+    _price.text = @"";
 }
 @end

@@ -10,6 +10,7 @@
 #import "DelimaCommonFunction.h"
 #import "TransactionHistory.h"
 #import "PropertyHelper.h"
+#import "Favorite.h"
 @interface InvoiceViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *namaMitra;
 @property (strong, nonatomic) IBOutlet UILabel *trxDate;
@@ -34,6 +35,7 @@
     CGRect frame = _favoriteView.frame;
     frame.origin.y = self.view.frame.size.height-60;
     _favoriteView.frame = frame;
+     _favoriteView.hidden = NO;
     //////
     
     
@@ -57,14 +59,7 @@
     int data = [_hargaText integerValue]+[_feeText integerValue];
     
     _totalHarga.text =[NSString stringWithFormat:@"Rp %@,-",[[DelimaCommonFunction sharedCommonFunction] formatToRupiah:[NSNumber numberWithInt:data]]];
-    
-    NSLog(@"data-->%@",_itemString);
-    NSLog(@"data-->%@",_trxDate.text);
-    NSLog(@"data-->%@",_dataHarga.text);
-    NSLog(@"data-->%@",_noTujuan.text);
-    NSLog(@"data-->%@",_namaPelanggan);
-    
-    
+
     NSLog(@"Pembaayaran %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text);
     TransactionHistory *t = [[TransactionHistory alloc]init];
     t.executeDate =[NSDate date];
@@ -86,8 +81,6 @@
         _namaPelanggan = @"";
     t.keterangan =[NSString stringWithFormat:@"%@ %@ No.Bill %@ a/n %@ Sejumlah %@ telah berhasil",state,_item.text,_noTujuan.text,_namaPelanggan,_dataHarga.text];
     [TransactionHistory save:t withRevision:YES];
-    
-    NSLog(@"Transaction History Key->%@",[TransactionHistory allObjects]);
     // Do any additional setup after loading the view.
 }
 
@@ -123,18 +116,36 @@
     }
 }
 - (IBAction)simpanFavorite:(id)sender {
-    NSLog(@"123-->%@",[PropertyHelper getTempFavorite]);
-    [PropertyHelper getTempFavorite];
+    
+    Favorite *f = [[Favorite alloc]init];
+    f.amount =[[PropertyHelper getTempFavorite] objectForKey:@"amount"];
+    if([[[PropertyHelper getTempFavorite] objectForKey:@"storyboardName"] isEqualToString:@"Beli"])
+        f.type=1;
+    else if ([[[PropertyHelper getTempFavorite] objectForKey:@"storyboardName"] isEqualToString:@"bayar"])
+        f.type = 2;
+    f.controllerName =[[PropertyHelper getTempFavorite] objectForKey:@"controllerName"];
+    f.denom =[[PropertyHelper getTempFavorite] objectForKey:@"denom"];
+    f.hargaJual = [[PropertyHelper getTempFavorite] objectForKey:@"hargaJual"];
+    f.mercode =[[PropertyHelper getTempFavorite] objectForKey:@"mercode"];
+    f.prodcode =[[PropertyHelper getTempFavorite] objectForKey:@"prodcode"];
+    f.itemName =[[PropertyHelper getTempFavorite] objectForKey:@"prodName"];
+    f.recipientNumber =[[PropertyHelper getTempFavorite] objectForKey:@"recipientNumber"];
+    f.storyboardName =[[PropertyHelper getTempFavorite] objectForKey:@"storyboardName"];
+    f.title =[[PropertyHelper getTempFavorite] objectForKey:@"subCategory"];
+    f.hargaDasar =[[PropertyHelper getTempFavorite] objectForKey:@"hargaDasar"];
+    if (_typeString) {
+        f.parent = _typeString;
+    }
+    else{
+        f.parent = [[PropertyHelper getTempFavorite] objectForKey:@"_typeString"];
+    }
+    
+    [Favorite save:f withRevision:YES];
+    _favoriteView.hidden = YES;
+    [[DelimaCommonFunction sharedCommonFunction]setAlert:@"Sukses" message:@"Berhasil Menyimpan Transaksi Di Favorit"];
+    
+    
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

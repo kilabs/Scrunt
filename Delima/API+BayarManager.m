@@ -15,7 +15,7 @@
     return [[delimaAPIManager sharedClient]POST:[NSString stringWithFormat:@"%@billpaymentfc2.php",delimaAPIUrl] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *postsFromResponse = responseObject;
         NSMutableArray *mutablePosts = [[NSMutableArray alloc]init];
-        
+        NSLog(@"responseObject->%@",responseObject);
         if ([[responseObject objectForKey:@"rc"]isEqualToString:@"00"]) {
             [mutablePosts addObject:postsFromResponse];
             //// save it into model

@@ -21,7 +21,7 @@
 @property (strong,nonatomic)NSMutableArray *opName;
 @property (strong,nonatomic)NSMutableArray *kode;
 @property (strong, nonatomic) IBOutlet UIButton *buttonKirim;
-@property (strong, nonatomic) NSString *prodKode;
+
 @property (strong, nonatomic) User *sharedUser;
 
 @end
@@ -32,6 +32,9 @@
     [super viewDidLoad];
     _vendorText.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
     _noPelanggan.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    
+    _vendorText.text = _passingDataVendorName;
+    _noPelanggan.text = _passingDataTujuan;
     
     NSArray *data = [PropertyHelper readFromKeys:@[@"data"] withPropertiesPath:self.title];
     _opName = [[NSMutableArray alloc]init];
@@ -81,10 +84,31 @@
                              @"idx":@"1",
                              @"ref":_sharedUser.ref
                              };
+    
+    ///use this shit
+    UIStoryboard * storyboard = self.storyboard;
+    NSString * storyboardName = [storyboard valueForKey:@"name"];
+    
+    NSDictionary *favParams = @{
+                                @"mercode":_sharedUser.merchantCode,
+                                @"amount":@"0",
+                                @"prodcode":_prodKode,
+                                @"subCategory":self.title,
+                                @"prodName":_vendorText.text,
+                                @"denom": @"0",
+                                @"hargaJual":@"0",
+                                @"recipientNumber":_noPelanggan.text,
+                                @"storyboardName":storyboardName,
+                                @"hargaDasar":@"0",
+                                @"controllerName":@"SharedBayarDetailViewController",
+                                @"typeString":[NSString stringWithFormat:@"%@;%@",self.title,_vendorText.text]
+                                };
+
+    
     [API_BayarManager paid:params p:^(NSArray *posts, NSError *error) {
         if(!error){
             if(posts.count !=0){
-                [PropertyHelper setFavorite:params];
+                [PropertyHelper setFavorite:favParams];
                 [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 UIStoryboard *s = [UIStoryboard storyboardWithName:@"Inquiry" bundle:nil];
                 

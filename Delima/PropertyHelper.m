@@ -41,7 +41,6 @@ static NSDictionary *tempDictionaryFavorite;
     }
 }
 + (void)setFavorite:(NSDictionary *)params{
-    NSLog(@"params-->%@",params);
     tempDictionaryFavorite = params;
 }
 +(NSDictionary *)getTempFavorite{

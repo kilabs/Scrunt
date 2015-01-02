@@ -9,16 +9,27 @@
 #import "RLMObject.h"
 
 @interface Favorite : RLMObject
-/*
- amount = 50000;
- controllerName = SharedBeliViewController;
- denom = "50000/50500";
- hargaJual = 50500;
- mercode = FNN778;
- prodcode = 777060;
- recipientNumber = 087818113311;
- storyboardName = Beli;
- */
 
+@property NSInteger id;
+@property NSInteger type;
+@property NSString *guid;
+@property NSDate *createdAt;
+@property NSDate *updatedAt;
+@property NSString *itemName;
+@property NSString *hargaJual;
+@property NSString *amount;
+@property NSString *title;
+@property NSString *mercode;
+@property NSString *prodcode;
+@property NSString *recipientNumber;
+@property NSString *controllerName;
+@property NSString *denom;
+@property NSString *storyboardName;
+@property NSString *hargaDasar;
+@property NSString *parent;
+
+
++ (void)save:(Favorite *)favorite withRevision:(BOOL)revision;
++(NSArray *)getAllFavorite;
 
 @end
