@@ -37,7 +37,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _state = 0;
+    self.revealViewController.panGestureRecognizer.enabled=YES;
+    _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
+    [_tableData reloadData];
+    [_tableData reloadData];
+    
+    _tableData.tableFooterView = [[UIView alloc]init];
+    self.view.backgroundColor =[UIColor whiteColor];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self setDefaultDelimaNavigationBar];
+    self.revealViewController.panGestureRecognizer.enabled=YES;
     _userActive = [User getUserProfile];
+    NSLog(@"data--%@",_userActive.sessionid);
     if (![_userActive.sessionid isEqualToString:@""]) {
         [self reloadData];
         [_tableData reloadData];
@@ -52,22 +66,6 @@
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
     // Do any additional setup after loading the view, typically from a nib.
-    _state = 0;
-    self.revealViewController.panGestureRecognizer.enabled=YES;
-    _data = [NSArray arrayWithArray:[TransactionHistory getAllHistory]];
-    [_tableData reloadData];
-    [_tableData reloadData];
-    
-    _tableData.tableFooterView = [[UIView alloc]init];
-    self.view.backgroundColor =[UIColor whiteColor];
-    
-    
-}
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    [self setDefaultDelimaNavigationBar];
-    self.revealViewController.panGestureRecognizer.enabled=YES;
-    
     
 }
 
@@ -82,7 +80,6 @@
     [_tableData reloadData];
 }
 - (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender {
-    NSLog(@"data-->%d",_segmentedControl.selectedSegmentIndex);
     switch (_segmentedControl.selectedSegmentIndex)
     {
         case 0:
@@ -98,7 +95,9 @@
     }
     
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
